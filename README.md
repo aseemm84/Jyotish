@@ -54,6 +54,27 @@ chart · muhūrta day tools (Rāhu kālam, Yamaganda, Gulika kālam, choghaḍiy
 Avakhaḍa chakra · Bhayāta/Bhabhoga · the three friendship chakras · kārakas ·
 ārūḍhas · yogas · current transits
 
+**Views on top of the report** — the report opens on tabs, with the full forty sections one tab among them:
+
+- **Overview** — a plain-language "chart at a glance" (lagna and its lord, the Moon, strongest and weakest grahas,
+  weighted houses, yogas, the running period, the sky now, how secure the lagna is), each card linking to its
+  section; and an interactive rāśi chart — select a planet to shade where it sits, what it aspects and what it
+  rules, with its daśā dates and transit; select a house for its lord, occupants, glances and SAV
+- **Now** — all five daśā levels with progress, the slow planets read from the Moon with ashtakavarga support and
+  next ingress, the Sade Sati phase, and today's pañcāṅga, tārābala, Rāhu kālam and choghaḍiyā at the birth
+  place or the viewer's own location
+- **Life timeline** — daśās, Sade Sati and dhaiyā phases, and Jupiter, Saturn and nodal returns on one chart
+  (next ten years or whole life), with the turning points of the coming decade
+- **Reading path** — a seven-step first reading (lagna → lagna lord → Moon → strength → yogas → daśā →
+  transits), each step pairing the method with what it finds in this chart
+- **Life events** — log dated events; each shows the daśā and transits then and whether the period lords tie to
+  that kind of event's houses, against a chance baseline. Kept in the browser only
+- **Birth-time check** — the window of birth times over which the D1, D9, D10, D7, D12 and D60 lagnas hold, an
+  hour-either-side ruler, the Moon's pāda window and how far daśā dates move per ten minutes, with one-click
+  recasts at nearby times
+- **Compatibility** — the Aṣṭakūṭa comparison of two Moons out of 36, with the commonly cited doṣa exceptions
+  tested and the Mars placement noted, framed as a traditional method for study
+
 Each section carries a plain-language **study note** composed from the site's own
 rules, linking back to the reference page the rule came from. A brief/detailed toggle
 controls depth. Print to PDF, download the JSON, or copy it.

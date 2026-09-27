@@ -196,6 +196,84 @@ code.k-inline{background:#f0f0f6;padding:1px 5px;border-radius:5px;font-size:12.
 .kreport .ksec{scroll-margin-top:60px}
 .kreport .ktwrap:focus{outline:2px solid var(--gold);outline-offset:2px}
 @media print{.kreport .kindex{display:none}}
+
+/* ---- report tabs ---- */
+.kreport .ktabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;background:var(--paper);border-bottom:2px solid var(--gold);padding:8px 0 0;margin:14px 0 4px;scroll-margin-top:50px}
+.kreport .ktabs button{flex:0 0 auto;border:1px solid var(--line);border-bottom:0;background:#fff;color:#4a4e68;font:inherit;font-size:13px;font-weight:600;padding:8px 13px;border-radius:9px 9px 0 0;cursor:pointer}
+.kreport .ktabs button:hover{color:var(--ink);background:#fdfbf4}
+.kreport .ktabs button.on{background:var(--night);color:#fff;border-color:var(--night)}
+.kreport .ktabs button.on .kmut{color:#c7cbe4}
+.kreport .ktabs button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.kreport .kpane{padding-top:10px}
+.kreport .kpaneh{display:none}
+.kreport .kgo{font-size:12.5px;font-weight:600;color:#2b5fa5;text-decoration:none;white-space:nowrap}
+.kreport .kgo:hover{color:var(--gold);text-decoration:underline}
+.kreport .kgood{color:#1c6b46;font-weight:600}.kreport .kmid{color:#8a6a1f;font-weight:600}.kreport .kbad{color:#a1493a;font-weight:600}
+/* ---- at a glance ---- */
+.kreport .kglance{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin:10px 0 18px}
+.kreport .kgi{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px 4px 10px 10px;padding:11px 14px;display:flex;flex-direction:column}
+.kreport .kgk{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.kreport .kgv{font-size:13.5px;line-height:1.55;flex:1}
+.kreport .kgl{margin-top:8px}
+/* ---- interactive chart ---- */
+.kreport .kinteract{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:20px;align-items:start;margin:10px 0}
+@media(max-width:760px){.kreport .kinteract{grid-template-columns:1fr}}
+.kreport .kichart .kih{fill:transparent;cursor:pointer;transition:fill .15s}
+.kreport .kichart .kih:hover{fill:#f4edda}
+.kreport .kichart .kih:focus{outline:none;fill:#efe6cc}
+.kreport .kichart .kih.is-at{fill:#ecd9a2}.kreport .kichart .kih.is-asp{fill:#d9e4f2}.kreport .kichart .kih.is-own{fill:#d7ecdf}
+.kreport .kichart .kip{cursor:pointer;font-size:13.5px}
+.kreport .kichart .kip:hover,.kreport .kichart .kip:focus{fill:#b08a2e;outline:none}
+.kreport .kichart .kip.on{fill:#a1493a;text-decoration:underline}
+.kreport .kichart .kilg{fill:#b08a2e}
+.kreport .kkey{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin:0 4px 0 8px}
+.kreport .kk-at{background:#ecd9a2}.kreport .kk-asp{background:#d9e4f2}.kreport .kk-own{background:#d7ecdf}
+.kreport .kipanel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px}
+.kreport .kipanel p{margin:6px 0 0;color:var(--muted)}
+.kreport .kiph{display:block;font-family:var(--serif);font-size:17px;margin-bottom:6px}
+.kreport .kiph .kmut{font-family:var(--sans);font-size:12px;font-weight:400}
+/* ---- now, timeline, birth time ---- */
+.kreport .kday-bar,.kreport .klifebar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.kreport .kday-bar .k-btn,.kreport .klifebar .k-btn{padding:6px 12px;font-size:13px}
+.kreport .klifebar .k-btn.on{background:var(--night);color:#fff;border-color:var(--night)}
+.kreport .kwsvg .lab{font:600 10px system-ui,sans-serif;fill:#4a4e68;text-anchor:end}
+.kreport .kwsvg .bl{font:700 9.5px system-ui,sans-serif;fill:#fff;text-anchor:middle;pointer-events:none}
+.kreport .kwsvg .ta{font:400 8px system-ui,sans-serif;fill:#9a917a;text-anchor:middle}
+.kreport .klife rect,.kreport .kruler rect{cursor:default}
+.kreport .klife g:hover rect{opacity:.8}
+.kreport .klifev,.kreport .kruler{overflow-x:auto}
+/* ---- reading path ---- */
+.kreport .kpath{border:1px solid var(--line);border-radius:12px;background:#fff;padding:12px 14px;margin:10px 0}
+.kreport .kpath-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.kreport .kpath-nav button{border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 11px 4px 4px;font:inherit;font-size:12.5px;cursor:pointer;color:#4a4e68}
+.kreport .kpath-nav button span{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:#fff;margin-right:6px;font-weight:700;font-size:11px}
+.kreport .kpath-nav button.on{background:var(--night);color:#fff;border-color:var(--night)}
+.kreport .kpath-nav button.on span{background:var(--gold);color:#231c07}
+.kreport .kstep-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.kreport .kstep-cols{grid-template-columns:1fr}}
+.kreport .kstep h5{margin:6px 0 4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.kreport .kstep p{font-size:13.5px;margin:0}
+.kreport .kstep-try{background:#fbf6e8;border-left:3px solid var(--gold);padding:8px 12px;margin:12px 0 4px;font-size:13px;border-radius:0 7px 7px 0}
+.kreport .kstep-try b{margin-right:4px}
+.kreport .kstep .kasrc{display:flex;gap:14px;flex-wrap:wrap}
+.kreport .kpath-foot{display:flex;justify-content:space-between;gap:10px;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+/* ---- life events, compatibility ---- */
+.kreport .kev-form{display:grid;grid-template-columns:150px 1fr 190px auto;gap:10px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+@media(max-width:760px){.kreport .kev-form{grid-template-columns:1fr 1fr}.kreport .kev-form .kev-wide{grid-column:1/-1}}
+.kreport .kev-form label{font-size:12px;font-weight:600;color:#4a4e68;display:flex;flex-direction:column;gap:4px}
+.kreport .kev-form input,.kreport .kev-form select{padding:8px 9px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:14px;background:#fdfdff;color:var(--ink);min-width:0}
+.kreport .kev-del{border:0;background:none;color:#a1493a;cursor:pointer;font-size:13px;padding:2px 6px}
+.kreport .kmatch-form{margin-top:10px}
+.kreport .kmbar{position:relative;height:12px;background:#e6dfcb;border-radius:3px;overflow:visible;margin:4px 0 10px}
+.kreport .kmbar span{display:block;height:100%;border-radius:3px;background:linear-gradient(90deg,#b08a2e,#1c6b46)}
+.kreport .kmbar i{position:absolute;top:-4px;width:2px;height:20px;background:#1d2340}
+.kreport ul.kmlist{font-size:13px;margin:6px 0 8px}
+@media print{
+  .kreport .ktabs,.kreport .kday-bar,.kreport .klifebar,.kreport .kpath-nav,.kreport .kpath-foot,.kreport .kev-form,.kreport .kmatch-form,.kreport .kev-del{display:none!important}
+  .kreport .kpane[hidden],.kreport .kstep[hidden],.kreport .klifev[hidden]{display:block!important}
+  .kreport .kipanel[hidden],.kreport .kipanel[data-panel="none"]{display:none!important}
+  .kreport .kpaneh{display:block;font-size:20px;border-bottom:2px solid var(--gold);margin:22px 0 8px;break-after:avoid}
+}
 </style></head><body><header class="masthead"><p class="eyebrow">LearnHoro · Brihat Parashara Hora Shastra</p><h1>Build a Kundli</h1><p class="sub">How a birth chart is cast in the sidereal zodiac — and a tool that computes a full chart in your browser and links each planet into the padas reference.</p></header><nav class="site"><a href="index.html">Home</a><a href="kundli.html" class="active">Build a Kundli</a><a href="grahas.html">Grahas</a><a href="dignity.html">Dignity</a><a href="rashis.html">Rashis</a><a href="bhavas.html">Bhavas</a><a href="lagna.html">Lagna</a><a href="aspects.html">Aspects</a><a href="vargas.html">Vargas</a><a href="strength.html">Strength</a><a href="special-points.html">Special Points</a><a href="yogas.html">Yogas</a><a href="avasthas-longevity.html">Avasthas & Longevity</a><a href="dashas.html">Dashas</a><a href="ashtakavarga.html">Ashtakavarga</a><a href="108-nakshatra-padas.html">108 Padas ↗</a></nav><div class="layout"><aside class="onpage"><b>On this page</b><a href="#what">What a kundli is</a><a href="#need">What you need</a><a href="#how">How a chart is cast</a><a href="#cast">Cast a chart now</a><a href="#read">How to read what comes back</a><a href="#limits">Accuracy, attribution & limits</a></aside><main><p class="lead">A <b>kundli</b> (janma-kundali) is a birth chart: a map of the sky at the exact moment and place of birth, projected onto the twelve bhavas counted from the Lagna. This page explains how a chart is cast, then lets you compute a real one and follow each piece into the reference pages.</p><p class="term"><b>Kundli / Janma-kundali</b> — birth chart &mdash; the positions of the nine grahas, the Lagna and the twelve bhavas at the birth instant, expressed in the sidereal (nirayana) zodiac.</p><h2 id="what">What a kundli is</h2><p>Vedic astrology reads the chart in the <b>sidereal</b> zodiac, measured from a fixed star point rather than the moving equinox. The difference between the two zodiacs at a given date is the <b>ayanamsha</b>; subtracting it from an ordinary (tropical) position gives the sidereal position Jyotisha uses. The chart is then a set of nine grahas seated in twelve rashis, read as twelve bhavas from the rising sign.</p><h2 id="need">What you need</h2><ul><li><b>Date of birth</b> &mdash; the calendar date.</li><li><b>Exact time of birth</b> &mdash; to the minute if possible. This is the most important input: the Lagna moves about one degree every four minutes, and the finest divisions (D60) change every ~30 seconds.</li><li><b>Place of birth</b> &mdash; resolved to latitude, longitude, and the UTC offset in force there at that date.</li></ul><div class="caution"><b>Handle with care.</b> Everything on this page is a <b>study aid</b> for learning BPHS method, not a prediction or a judgement about any person. Because results hinge on birth time, treat a chart cast from an uncertain time as provisional &mdash; and take medical, legal, financial or personal decisions to a qualified professional, never to a chart.</div><h2 id="how">How a chart is cast</h2><ol><li><b>Fix the exact birth instant.</b> Combine the date, the clock time, and the UTC offset that applied at that place and date. Errors here propagate into everything downstream.</li><li><b>Compute sidereal positions.</b> An ephemeris gives each graha&rsquo;s longitude; subtract the <b>ayanamsha</b> (Lahiri by default) to place it in the sidereal zodiac. See <a href="rashis.html">Rashis</a> and <a href="dignity.html">Dignity</a>.</li><li><b>Find the Lagna.</b> From the instant and the coordinates, determine the sign and degree rising in the east &mdash; the anchor of the chart. See <a href="lagna.html">Lagna</a>.</li><li><b>Place the grahas.</b> Seat each planet in its rashi and read its <b>nakshatra and pada</b>. See the <a href="108-nakshatra-padas.html">108 Padas</a> tool and <a href="grahas.html">Grahas</a>.</li><li><b>Build the bhavas and vargas.</b> Count the twelve houses from the Lagna (whole-sign by default), then derive the divisional charts &mdash; D9, D10 and the rest. See <a href="bhavas.html">Bhavas</a> and <a href="vargas.html">Vargas</a>.</li><li><b>Start the dasha clock.</b> From the Moon&rsquo;s nakshatra, compute the Vimshottari balance at birth and the sequence of periods. See <a href="dashas.html">Dashas</a>.</li></ol><p class="src"><span>Source</span> BPHS, Vol. 1, Ch. 3&ndash;6 (sidereal positions, rashis, dignity, vargas) and Vol. 2, Ch. 46 (Vimshottari from the Moon&rsquo;s nakshatra). The casting arithmetic itself is standard astronomy; BPHS supplies the framework the numbers are read within.</p><div class="note"><b>Translator / commentary.</b> This site&rsquo;s stated defaults are the sidereal zodiac, Lahiri/Chitrapaksha ayanamsha, whole-sign houses and Vimshottari dasha. The engine below uses the sidereal zodiac with Lahiri ayanamsha, so its output matches those defaults; note that other software using a different ayanamsha or house system will differ slightly.</div><h2 id="cast">Cast a chart now</h2><p>Everything below is computed <b>in your browser</b> — planetary positions, the lagna, all sixteen vargas, ashtakavarga, yogas, ṣaḍbala and the full daśā tree. Nothing is sent anywhere and the page works offline. Each planet&rsquo;s nakshatra links straight into the padas tool. If you want a second opinion on the positions, the chart-source selector can fetch the same chart from an external ephemeris service and report how far the two disagree.</p>
 <div class="k-form">
   <div class="k-full"><label for="k-src">Chart source</label>
@@ -927,6 +1005,20 @@ function sankrantiWeekday(jd,date,targetLon){
 }
 
 try{ window.__AVT=AVT; window.__ayan=ayanamsa; }catch(e){}
+/* sidereal lagna for the birth input shifted by offMin minutes — used by the birth-time check */
+window.__kAsc=function(inp,offMin){
+  var ut=inp.hour+inp.minute/60+(offMin||0)/60-inp.tzHours;
+  var jd=jdFromUTC(inp.year,inp.month,inp.day,ut);
+  var date=new Date(Date.UTC(inp.year,inp.month-1,inp.day,0,0,0)+ut*3600000);
+  return ascendant(jd,date,inp.lat,inp.lon,ayanamsa(jd));
+};
+/* sidereal longitude of a graha at any instant — used by the timeline, events and Now panel */
+window.__kSidAt=function(name,date){
+  var jd=date.getTime()/86400000+2440587.5, ay=ayanamsa(jd);
+  if(name==="Rahu") return norm(meanNode(jd)-ay);
+  if(name==="Ketu") return norm(meanNode(jd)-ay+180);
+  return norm(tropLon(name,date)-ay);
+};
 window.buildLocalChart=function(inp){
   var tz=inp.tzHours, ut=inp.hour+inp.minute/60-tz;
   var jd=jdFromUTC(inp.year,inp.month,inp.day,ut);
@@ -1306,8 +1398,12 @@ function tbl(head,rows,cls){
    head.map(function(h){return '<th scope="col">'+h+"</th>";}).join("")+
    '</tr></thead><tbody>'+rows.join("")+'</tbody></table></div>';
 }
-var __secN=0, __secList=[];
-function secId(title){ return "ks-"+(++__secN); }
+var __secN=0, __secList=[], __secUsed={};
+/* stable, readable ids ("Vimśottarī daśā" → ks-vimsottari-dasa) so other panes can link into the report */
+function slug(t){ return String(t).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()
+  .replace(/&/g," and ").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,""); }
+function secId(title){ ++__secN; var s="ks-"+slug(title), id=s, n=2;
+  while(__secUsed[id]) id=s+"-"+(n++); __secUsed[id]=1; return id; }
 function sec(title,side,body){
   var id=secId(title); __secList.push({id:id,title:title});
   return '<section class="ksec" id="'+id+'" aria-labelledby="'+id+'-h"><h3 class="kh" id="'+id+'-h">'+
@@ -2524,7 +2620,13 @@ function sadeSatiSection(D){
     if(last && last[0]===seg[0] && (seg[1]-last[2])<400) last[2]=seg[2];
     else merged.push([seg[0],seg[1],seg[2]]);
   });
-  out=merged.filter(function(s){ return (s[2]-s[1])>120; });   // drop fragments under ~4 months
+  // a phase begins at Saturn's first ingress: fold a retrograde return to an earlier phase into that phase
+  var fold=[];
+  merged.forEach(function(x){ var l=null; for(var i=fold.length-1;i>=0;i--){ if(fold[i][0]===x[0]){ l=fold[i]; break; } }
+    if(l&&(x[1]-l[2])<500) l[2]=Math.max(l[2],x[2]); else fold.push([x[0],x[1],x[2]]); });
+  fold.sort(function(a,b){ return a[1]-b[1]; });
+  for(var fi=0;fi<fold.length-1;fi++) if(fold[fi][2]>fold[fi+1][1]) fold[fi][2]=fold[fi+1][1];
+  out=fold.filter(function(s){ return (s[2]-s[1])>120; });   // drop fragments under ~4 months
   var NAME={11:"Sade Sati — rising (12th)",0:"Sade Sati — peak (over the Moon)",1:"Sade Sati — setting (2nd)",
             3:"Dhaiyā (4th from Moon)",7:"Dhaiyā (8th from Moon)"};
   var rows=out.map(function(r){
@@ -2946,10 +3048,699 @@ function deriveForExport(J){
     "engine output in this same file and are reproducible from it.";
   return out;
 }
+/* ======================================================================
+   Report panes — Overview (at a glance + interactive chart), Now, Life
+   timeline, Reading path, Life events, Birth-time check, Compatibility.
+   All derived from D / J and fresh positions from the built-in engine;
+   nothing leaves the browser.
+   ====================================================================== */
+function jdToDate(jd){ return new Date((jd-2440587.5)*86400000); }
+function sidAt(name,jd){ try{ return window.__kSidAt(name,jdToDate(jd)); }catch(e){ return null; } }
+function signAt(name,jd){ var s=sidAt(name,jd); return s==null?null:Math.floor(s/30)%12; }
+function hFrom(sign,base){ return ((sign-base)%12+12)%12+1; }
+function secLink(title,label){ return '<a class="kgo" href="#ks-'+slug(title)+'">'+esc(label||title)+' →</a>'; }
+function tabLink(tab,label){ return '<a class="kgo" href="#" data-ktab-go="'+tab+'">'+esc(label)+' →</a>'; }
+function pageLink(key){ return '<a class="kgo" href="'+SRCP[key]+'">'+SRCN[key]+' page →</a>'; }
+function shortSig(h){ return HSIG[h].split(",")[0]; }
+var DIGW={exalted:"exalted",moolatrikona:"in its mūlatrikoṇa",own:"in its own sign",friend:"in a friendly sign",
+  neutral:"in a neutral sign",enemy:"in an unfriendly sign",debilitated:"debilitated",node:"a node, read through its dispositor"};
+function lordLine(pl,D){
+  var p=D.P[pl], own=D.owns[pl]||[];
+  return '<b>'+esc(pl)+'</b>'+(own.length?" (lord of the "+list(own.map(ord))+")":"")+
+    (p?", in the "+ord(p.house)+" ("+SA[p.sign]+"), "+DIGW[p.dig]:"");
+}
+function sbOf(J){ return (J&&J.shadbala&&!J.shadbala.error&&J.shadbala.planets)?J.shadbala.planets:null; }
+function aspectedBy(D,h){ var a=[]; D.planets.forEach(function(p){ if(aspectsFrom(p.en,p.house).indexOf(h)>=0) a.push(p.en); }); return a; }
+function transitOf(D,en){ var t=null; D.transits.forEach(function(x){ if((x.en==="Rāhu"?"Rahu":x.en)===en) t=x; }); return t; }
+function isWaxing(D){ return D.P.Sun&&D.P.Moon&&(((D.P.Moon.sid-D.P.Sun.sid)%360+360)%360)<180; }
+function paneErr(name,e){ return '<div class="kbox kwarn"><b>'+esc(name)+' could not be computed</b>'+esc(e&&e.message||e)+'</div>'; }
+
+/* ---------- slow-planet scan over the life: Saturn, Jupiter, Rāhu signs ---------- */
+var __scan=null;
+function slowScan(D){
+  var key=D.jd+"|"+D.P.Moon.sid; if(__scan&&__scan.key===key) return __scan.S;
+  var S=[], end=D.jd+100*365.25;
+  for(var jd=D.jd; jd<=end; jd+=12) S.push({jd:jd,sat:signAt("Saturn",jd),jup:signAt("Jupiter",jd),rahu:signAt("Rahu",jd)});
+  __scan={key:key,S:S}; return S;
+}
+function runs(S,fn){
+  var out=[],cur=null;
+  S.forEach(function(s){ var k=fn(s);
+    if(k!=null&&cur&&cur.k===k){ cur.e=s.jd; return; }
+    if(cur){ out.push(cur); cur=null; }
+    if(k!=null) cur={k:k,s:s.jd,e:s.jd};
+  });
+  if(cur) out.push(cur); return out;
+}
+function mergeRuns(r,gap,minLen){
+  var m=[]; r.forEach(function(x){ var l=m[m.length-1];
+    if(l&&l.k===x.k&&(x.s-l.e)<gap) l.e=x.e; else m.push({k:x.k,s:x.s,e:x.e}); });
+  return m.filter(function(x){ return (x.e-x.s)>=minLen; });
+}
+var SS_NAME={11:"Sade Sati — rising",0:"Sade Sati — peak",1:"Sade Sati — setting",3:"Dhaiyā (4th from Moon)",7:"Dhaiyā (8th from Moon)"};
+function lifeCycles(D){
+  var S=slowScan(D), mS=D.P.Moon.sign;
+  var nat={Saturn:D.P.Saturn&&D.P.Saturn.sign,Jupiter:D.P.Jupiter&&D.P.Jupiter.sign,Rahu:D.P.Rahu&&D.P.Rahu.sign};
+  // a phase begins at Saturn's first ingress; retrograde slips back into the previous sign are folded into it
+  var raw=runs(S,function(s){ var r=hFrom(s.sat,mS)-1; return [11,0,1,3,7].indexOf(r)>=0?r:null; }), sade=[];
+  raw.forEach(function(x){ var l=null; for(var i=sade.length-1;i>=0;i--){ if(sade[i].k===x.k){ l=sade[i]; break; } }
+    if(l&&(x.s-l.e)<500) l.e=Math.max(l.e,x.e); else sade.push({k:x.k,s:x.s,e:x.e}); });
+  sade.sort(function(a,b){ return a.s-b.s; });
+  for(var i=0;i<sade.length-1;i++) if(sade[i].e>sade[i+1].s) sade[i].e=sade[i+1].s;
+  sade=sade.filter(function(x){ return (x.e-x.s)>=120; });
+  var whole=mergeRuns(runs(S,function(s){ var r=hFrom(s.sat,mS)-1; return (r===11||r===0||r===1)?"SS":null; }),400,300);
+  var ret=[];
+  mergeRuns(runs(S,function(s){ return s.jup===nat.Jupiter?"Jupiter":null; }),200,40).forEach(function(r){ ret.push(r); });
+  mergeRuns(runs(S,function(s){ return s.sat===nat.Saturn?"Saturn":null; }),400,60).forEach(function(r){ ret.push(r); });
+  mergeRuns(runs(S,function(s){ return s.rahu===nat.Rahu?"Rahu":null; }),200,60).forEach(function(r){ ret.push(r); });
+  // the natal placement itself is not a "return": drop runs that start at birth
+  ret=ret.filter(function(r){ return r.s>D.jd+300; }).sort(function(a,b){ return a.s-b.s; });
+  return {sade:sade,whole:whole,returns:ret};
+}
+/* next sign change of a slow planet after jd (scanned daily, then to the hour) */
+function nextIngress(en,jd){
+  var s0=signAt(en,jd); if(s0==null) return null;
+  var lim=en==="Saturn"?1200:(en==="Jupiter"?500:(en==="Rahu"||en==="Ketu"?700:120));
+  for(var d=1; d<=lim; d++){ var s=signAt(en,jd+d); if(s!==s0){
+    var a=jd+d-1,b=jd+d; for(var k=0;k<6;k++){ var c=(a+b)/2; if(signAt(en,c)===s0) a=c; else b=c; }
+    return {jd:b,sign:s}; } }
+  return null;
+}
+
+/* ================= 1. At a glance ================= */
+function glancePane(D,J){
+  var LS=D.LS, ll=LORD[LS], lp=D.P[ll], mo=D.P.Moon, items=[];
+  function item(k,v,link){ items.push('<div class="kgi"><div class="kgk">'+k+'</div><div class="kgv">'+v+'</div>'+(link?'<div class="kgl">'+link+'</div>':'')+'</div>'); }
+  // frame
+  item("Rising sign · the frame of the chart",
+    '<b>'+SA[LS]+'</b> ('+SIGNS[LS]+') rises at '+dm(D.lagDeg)+' in '+padaLink(D.lagNak.name,D.lagNak.pada)+'. '+
+    'Its lord '+lordLine(ll,D)+'. '+(lp?'The self is steered toward the '+ord(lp.house)+' — '+shortSig(lp.house)+'.':''),
+    secLink("The chart"));
+  // mind
+  if(mo){
+    var withMo=D.planets.filter(function(p){ return p.en!=="Moon"&&p.house===mo.house; }).map(function(p){return p.en;});
+    item("The Moon · the mind",
+      'Moon in <b>'+SA[mo.sign]+'</b>, '+padaLink(mo.nak,mo.pada)+', in the '+ord(mo.house)+', '+DIGW[mo.dig]+'; a '+
+      (isWaxing(D)?'waxing (Śukla)':'waning (Kṛṣṇa)')+' Moon'+(withMo.length?', with '+list(withMo):'')+'. '+
+      'Its nakṣatra lord <b>'+esc(mo.naklord)+'</b> opens the Vimśottarī sequence.',
+      secLink("Chandra & Sūrya kuṇḍalī","Chart from the Moon"));
+  }
+  // strength
+  var sb=sbOf(J);
+  if(sb){
+    var top=sb.slice(0,2), low=sb.slice(-2).reverse();
+    item("Strongest and weakest grahas",
+      'By Ṣaḍbala, strongest: '+top.map(function(p){ return '<b>'+esc(p.graha)+'</b> ('+p.ratio.toFixed(2)+'× required)'; }).join(", ")+
+      '. Weakest: '+low.map(function(p){ return '<b>'+esc(p.graha)+'</b> ('+p.ratio.toFixed(2)+'×)'; }).join(", ")+
+      '. A strong graha delivers what it rules; a weak one needs support.',
+      secLink("Ṣaḍbala"));
+  }
+  // houses
+  if(D.av&&D.av.sarva){
+    var hs=[]; for(var h=1;h<=12;h++) hs.push({h:h,v:D.av.sarva[(LS+h-1)%12]});
+    hs.sort(function(a,b){ return b.v-a.v; });
+    var full=D.bhavas.filter(function(b){ return b.occ.length>=3; });
+    item("Where the chart is weighted",
+      'Most supported: the '+ord(hs[0].h)+' ('+hs[0].v+' bindus, '+shortSig(hs[0].h)+') and the '+ord(hs[1].h)+' ('+hs[1].v+'). '+
+      'Least: the '+ord(hs[11].h)+' ('+hs[11].v+', '+shortSig(hs[11].h)+').'+
+      (full.length?' Crowded: '+list(full.map(function(b){ return 'the '+ord(b.n)+' ('+list(b.occ)+')'; }))+'.':''),
+      secLink("Ashtakavarga"));
+  }
+  // yogas
+  var pres=D.yogas.filter(function(y){ return y.present; });
+  item("Yogas formed",
+    pres.length?list(pres.map(function(y){ return '<b>'+esc(y.iast||y.key)+'</b>'; }))+
+      '. A yoga is a promise that a related daśā has to activate.':'None of the catalogued yogas forms — the chart is read from its lords and houses.',
+    secLink("Yogas"));
+  // running period
+  var LV=levelsAt(D,D.nowJd);
+  if(LV&&LV[1]){
+    item("The period running now",
+      '<b>'+esc(LV[0].lord)+'</b> mahādaśā (to '+fmy(LV[0].end)+'), <b>'+esc(LV[1].lord)+'</b> antardaśā (to '+fmy(LV[1].end)+'). '+
+      lordLine(LV[0].lord,D)+'; '+lordLine(LV[1].lord,D)+'.',
+      tabLink("now","Open the Now panel"));
+  }
+  // sky now
+  var sat=transitOf(D,"Saturn"), jup=transitOf(D,"Jupiter");
+  if(sat&&jup&&mo){
+    var ss=hFrom(ridx(sat.rashi),mo.sign), jj=hFrom(ridx(jup.rashi),mo.sign);
+    item("The sky over this chart",
+      'Saturn is in the '+ord(ss)+' from the natal Moon'+(D.sade&&D.sade.active?' — <b>'+esc(SS_NAME[ss-1]||"Sade Sati / dhaiyā")+'</b> is running':'')+
+      '; Jupiter in the '+ord(jj)+' ('+(GOOD_FROM_MOON.Jupiter.indexOf(jj)>=0?'a classically favourable':'not a classically favourable')+' house for it).',
+      tabLink("timeline","See the life timeline"));
+  }
+  // birth-time robustness
+  var bt=null; try{ bt=lagnaMargins(D); }catch(e){}
+  if(bt){
+    var m=Math.min(bt.before,bt.after);
+    item("How sure is the lagna?",
+      'The lagna stays '+SA[D.LS]+' for birth times from <b>'+bt.from+'</b> to <b>'+bt.to+'</b> — '+
+      (m<5?'<span class="kbad">only '+m.toFixed(1)+' minutes of margin</span>, so the house frame depends on an exact time.':
+       m<15?'<span class="kmid">'+m.toFixed(0)+' minutes of margin</span>, adequate if the recorded time is good.':
+       '<span class="kgood">'+m.toFixed(0)+' minutes of margin</span>, so ordinary rounding will not change it.'),
+      tabLink("btime","Run the birth-time check"));
+  }
+  return '<p class="knote">A plain-language summary of this chart, built from the same rules as the full report. '+
+    'Each card links to the section it came from. New to this? '+tabLink("path","Take the 7-step reading path")+'</p>'+
+    '<div class="kglance">'+items.join("")+'</div>';
+}
+
+/* ================= 7. Interactive chart ================= */
+var NPOLY={1:"200,0 300,100 200,200 100,100",2:"0,0 200,0 100,100",3:"0,0 100,100 0,200",4:"0,200 100,100 200,200 100,300",
+  5:"0,200 100,300 0,400",6:"0,400 100,300 200,400",7:"100,300 200,200 300,300 200,400",8:"200,400 300,300 400,400",
+  9:"400,400 300,300 400,200",10:"200,200 300,100 400,200 300,300",11:"400,200 300,100 400,0",12:"400,0 300,100 200,0"};
+function interactiveChart(D,J){
+  var LS=D.LS, sb=sbOf(J), sbm={}; if(sb) sb.forEach(function(p){ sbm[p.graha]=p; });
+  var tree=buildTree(D)||[], now=D.nowJd;
+  var o='<svg viewBox="0 0 400 400" class="kchartsvg kichart" role="group" aria-label="Interactive rāśi chart — select a planet or a house">';
+  o+='<rect x="0" y="0" width="400" height="400" fill="#fbf8f0"/>';
+  for(var h=1;h<=12;h++) o+='<polygon class="kih" data-kip="h:'+h+'" data-h="'+h+'" points="'+NPOLY[h]+'" tabindex="0" role="button" aria-label="House '+h+'"/>';
+  o+='<path d="M0,0 L400,400 M400,0 L0,400 M200,0 L400,200 L200,400 L0,200 Z" fill="none" stroke="#1d2340" stroke-width="1.4" pointer-events="none"/>';
+  o+='<rect x="1.25" y="1.25" width="397.5" height="397.5" fill="none" stroke="#1d2340" stroke-width="2.5" pointer-events="none"/>';
+  for(var i=0;i<12;i++){ var hh=i+1,x=NPOS[i][0],y=NPOS[i][1],sg=(LS+i)%12;
+    o+='<text x="'+x+'" y="'+(y-22)+'" class="hn" pointer-events="none">'+hh+'</text>';
+    o+='<text x="'+x+'" y="'+(y-8)+'" class="hs" pointer-events="none">'+SA[sg]+'</text>';
+    var occ=D.planets.filter(function(p){ return p.house===hh; }), k=0;
+    if(hh===1){ o+='<text x="'+x+'" y="'+(y+8)+'" class="hp kilg" pointer-events="none">Lg</text>'; k=1; }
+    occ.forEach(function(p){
+      o+='<text x="'+x+'" y="'+(y+8+k*13)+'" class="hp kip" data-kip="p:'+p.en+'" tabindex="0" role="button" aria-label="'+p.en+'">'+
+        GL[p.en]+(p.retro?"℞":"")+'</text>'; k++; });
+  }
+  o+='</svg>';
+  var panels='<div class="kipanel" data-panel="none"><b>Select a planet or a house.</b><p>Planets are the two-letter labels. '+
+    'The chart then shades where that planet sits (gold), the houses it aspects (blue) and the houses it rules (green); '+
+    'a house shows its lord, occupants and the glances it receives.</p></div>';
+  D.planets.forEach(function(p){
+    var own=D.owns[p.en]||[], asp=aspectsFrom(p.en,p.house), onto=[];
+    D.planets.forEach(function(q){ if(q.en!==p.en&&asp.indexOf(q.house)>=0) onto.push(q.en); });
+    var by=aspectedBy(D,p.house).filter(function(x){ return x!==p.en; });
+    var withp=D.planets.filter(function(q){ return q.en!==p.en&&q.house===p.house; }).map(function(q){ return q.en; });
+    var st=[]; if(p.retro&&p.en!=="Rahu"&&p.en!=="Ketu") st.push("retrograde"); if(p.combust) st.push("combust ("+p.sep.toFixed(1)+"° from the Sun)");
+    if(p.digbala===p.house) st.push("directional strength"); if(D.vargottama.indexOf(p.en)>=0) st.push("vargottama");
+    var md=null; tree.forEach(function(m){ if(m.lord===p.en) md=m; });
+    var nextAd=null; tree.forEach(function(m){ (m.ads||[]).forEach(function(a){ if(!nextAd&&a.lord===p.en&&a.end>now) nextAd={md:m.lord,a:a}; }); });
+    var t=transitOf(D,p.en);
+    var rows=[
+      ["Position",SA[p.sign]+' '+dm(p.deg)+' · the '+ord(p.house)+' house · '+chip(p.dig)+' '+esc(DIGW[p.dig])],
+      ["Nakṣatra",padaLink(p.nak,p.pada)+' <span class="kmut">lord '+esc(p.naklord)+'</span>'],
+      ["Rules",own.length?own.map(function(x){ return 'the '+ord(x)+' <span class="kmut">('+shortSig(x)+')</span>'; }).join("; "):'no sign — a node acts for its dispositor '+esc(LORD[p.sign])],
+      ["Aspects","the "+list(asp.map(ord))+(onto.length?' — reaching '+list(onto):'')],
+      ["Aspected by",by.length?list(by):"—"],
+      ["Sits with",withp.length?list(withp):"—"],
+      ["State",st.length?list(st):"—"],
+      ["Ṣaḍbala",sbm[p.en]?sbm[p.en].total_rupa.toFixed(2)+' rupa · '+sbm[p.en].ratio.toFixed(2)+'× required':"—"],
+      ["Mahādaśā",md?fdate(Math.max(md.start,D.jd))+' → '+fdate(md.end)+(now>=md.start&&now<md.end?' <span class="kdt-tag">current</span>':''):"—"],
+      ["Next antardaśā",nextAd?esc(nextAd.md)+' → '+esc(p.en)+': '+fdate(Math.max(nextAd.a.start,now))+' → '+fdate(nextAd.a.end):"—"],
+      ["Transiting now",t?SA[ridx(t.rashi)]+' — the '+ord(hFrom(ridx(t.rashi),LS))+' from the lagna'+(t.retrograde&&p.en!=="Rahu"&&p.en!=="Ketu"?', retrograde':''):"—"]
+    ];
+    panels+='<div class="kipanel" data-panel="p:'+p.en+'" data-at="'+p.house+'" data-asp="'+asp.join(",")+'" data-own="'+own.join(",")+'" hidden>'+
+      '<b class="kiph">'+esc(p.en)+' <span class="kmut">'+esc(p.iast)+' — '+esc(PKAR[p.en]||"")+'</span></b>'+
+      '<table class="ktbl kkv"><tbody>'+rows.map(function(r){ return '<tr><td class="kk">'+r[0]+'</td><td>'+r[1]+'</td></tr>'; }).join("")+'</tbody></table>'+
+      '<div class="kasrc"><a href="grahas.html">Grahas</a> · <a href="dignity.html">Dignity</a> · <a href="aspects.html">Aspects</a></div></div>';
+  });
+  for(var n=1;n<=12;n++){
+    var sg2=(LS+n-1)%12, lord=LORD[sg2], lp=D.P[lord], b=D.bhavas[n-1]||{occ:[],cls:[]};
+    var by2=aspectedBy(D,n);
+    var rows2=[
+      ["Sign",SA[sg2]+' ('+SIGNS[sg2]+')'],
+      ["Signifies",esc(HSIG[n])],
+      ["Class",b.cls&&b.cls.length?b.cls.join(" · "):"—"],
+      ["Lord",lordLine(lord,D)],
+      ["Occupants",b.occ.length?list(b.occ):"empty"],
+      ["Aspected by",by2.length?list(by2):"—"],
+      ["Sarvāṣṭakavarga",b.sav!=null?b.sav+' bindus '+(b.sav>=30?'<span class="kgood">well supported</span>':b.sav<25?'<span class="kbad">under-supported</span>':'<span class="kmut">average</span>'):"—"],
+      ["Natural kāraka",HKAR[n]]
+    ];
+    panels+='<div class="kipanel" data-panel="h:'+n+'" data-at="'+n+'" data-asp="" data-own="'+(lp?lp.house:"")+'" hidden>'+
+      '<b class="kiph">The '+ord(n)+' house <span class="kmut">'+esc(BHN[n-1])+'</span></b>'+
+      '<table class="ktbl kkv"><tbody>'+rows2.map(function(r){ return '<tr><td class="kk">'+r[0]+'</td><td>'+r[1]+'</td></tr>'; }).join("")+'</tbody></table>'+
+      '<p class="klegend">Green marks where the lord sits.</p><div class="kasrc"><a href="bhavas.html">Bhavas</a></div></div>';
+  }
+  return '<div class="kinteract"><div class="kichartwrap">'+o+
+    '<p class="klegend"><span class="kkey kk-at"></span>sits · <span class="kkey kk-asp"></span>aspects · <span class="kkey kk-own"></span>rules / lord sits</p></div>'+
+    '<div class="kipanels" aria-live="polite">'+panels+'</div></div>';
+}
+var BHN=["Tanu","Dhana","Sahaja","Bandhu","Putra","Ripu","Kalatra","Āyu","Bhāgya / Dharma","Karma","Lābha","Vyaya / Mokṣa"];
+
+/* ================= 2. Now ================= */
+var TARA=["Janma","Sampat","Vipat","Kṣema","Pratyak","Sādhana","Naidhana","Mitra","Parama-mitra"];
+var TARA_OK=[null,true,false,true,false,true,false,true,true];
+function hm2(x){ x=((x%24)+24)%24; var m=Math.round(x*60)%1440; return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0"); }
+function dayBlock(D,lat,lon,tz,label){
+  var nowMs=Date.now(), loc=new Date(nowMs+tz*3600000);
+  var y=loc.getUTCFullYear(), m=loc.getUTCMonth()+1, d=loc.getUTCDate(), nowH=loc.getUTCHours()+loc.getUTCMinutes()/60;
+  var ev=sunEventsPrecise(y,m,d,lat,lon,tz)||sunEvents(y,m,d,lat,lon,tz);
+  var wd=(Math.floor(jdFrom(y,m,d,0)+1.5)%7+7)%7;
+  var jdNow=nowMs/86400000+2440587.5, mo=sidAt("Moon",jdNow), su=sidAt("Sun",jdNow);
+  var pc=panchanga(su,mo), nk=nakOf(mo), bn=nakOf(D.P.Moon.sid).idx;
+  var cnt=((nk.idx-bn+27)%27), ti=cnt%9, mh=hFrom(Math.floor(mo/30),D.P.Moon.sign);
+  var cf=GOOD_FROM_MOON.Moon.indexOf(mh)>=0;
+  var c='<div class="kcards">'+
+    '<div class="kcard"><div class="k">Today</div><div class="v">'+VARAE[wd]+'</div><div class="s">'+d+' '+MON[m]+' '+y+' · '+esc(label)+'</div></div>'+
+    '<div class="kcard"><div class="k">Tithi</div><div class="v">'+esc(pc.tithi)+'</div><div class="s">'+pc.paksha+' pakṣa · yoga '+esc(pc.yoga)+'</div></div>'+
+    '<div class="kcard"><div class="k">Moon today</div><div class="v">'+esc(nk.name)+'</div><div class="s">'+SA[Math.floor(mo/30)]+' · the '+ord(mh)+' from your Moon'+(cf?' (favourable)':'')+'</div></div>'+
+    '<div class="kcard"><div class="k">Tārābala</div><div class="v">'+TARA[ti]+'</div><div class="s">'+(TARA_OK[ti]==null?'the birth star returns':TARA_OK[ti]?'a supportive tārā':'a tārā tradition avoids for beginnings')+'</div></div></div>';
+  var t='';
+  if(ev){
+    var sr=ev.rise, ss=ev.set, part=(((ss-sr)+24)%24)/8;
+    var RAHU=[8,2,7,5,6,4,3], YAMA=[5,4,3,2,1,7,6], GULI=[7,6,5,4,3,2,1];
+    var CH={0:["Udvega","Chara","Labha","Amrita","Kala","Shubha","Roga","Udvega"],1:["Amrita","Kala","Shubha","Roga","Udvega","Chara","Labha","Amrita"],
+      2:["Roga","Udvega","Chara","Labha","Amrita","Kala","Shubha","Roga"],3:["Labha","Amrita","Kala","Shubha","Roga","Udvega","Chara","Labha"],
+      4:["Shubha","Roga","Udvega","Chara","Labha","Amrita","Kala","Shubha"],5:["Chara","Labha","Amrita","Kala","Shubha","Roga","Udvega","Chara"],
+      6:["Kala","Shubha","Roga","Udvega","Chara","Labha","Amrita","Kala"]};
+    var GOODCH=["Amrita","Shubha","Labha","Chara"];
+    function row(nm,k,note){ var s=sr+(k-1)*part, on=nowH>=s&&nowH<s+part;
+      return '<tr'+(on?' class="khl"':'')+'><td><b>'+nm+'</b>'+(on?' ← now':'')+'</td><td class="knum">'+hm2(s)+' – '+hm2(s+part)+'</td><td class="kmut">'+note+'</td></tr>'; }
+    var ci=Math.floor((nowH-sr)/part), cur=(ci>=0&&ci<8)?CH[wd][ci]:null;
+    t='<div class="ktwrap"><table class="ktbl"><thead><tr><th>Period</th><th>Time</th><th>Note</th></tr></thead><tbody>'+
+      '<tr><td><b>Sunrise / sunset</b></td><td class="knum">'+hm2(sr)+' / '+hm2(ss)+'</td><td class="kmut">disc centre, unrefracted</td></tr>'+
+      row("Rāhu kālam",RAHU[wd],"avoided for beginnings")+row("Yamaganda",YAMA[wd],"avoided for beginnings")+row("Gulika kālam",GULI[wd],"avoided for beginnings")+
+      '<tr><td><b>Choghaḍiyā now</b></td><td class="knum">'+(cur?hm2(sr+ci*part)+' – '+hm2(sr+(ci+1)*part):'—')+'</td><td style="font-weight:600;color:'+
+        (cur?(GOODCH.indexOf(cur)>=0?"#1c6b46":"#a1493a"):"inherit")+'">'+(cur||'night — not tabulated')+'</td></tr></tbody></table></div>';
+  }
+  return c+t+'<p class="klegend">Times are local to '+esc(label)+' (UTC'+(tz>=0?"+":"")+tz+'). Tārābala counts from your birth nakṣatra ('+
+    esc(D.P.Moon.nak)+') to today\'s; regional tables for these muhūrta tools vary.</p>';
+}
+function nowPane(D,J){
+  var now=D.nowJd, h='', LV=levelsAt(D,now), mo=D.P.Moon;
+  h+='<p class="knote">What is running for this chart today, '+fdate(now)+'. Read these as seasons and themes to reflect on, '+
+     'not forecasts — every reading here is conditional on the whole chart.</p>';
+  if(LV){
+    h+='<h4 class="ksub">Daśā in force</h4>';
+    LV.forEach(function(x){ h+=prog(x.lvl,x.lord,Math.max(0,Math.min(100,(now-x.start)/(x.end-x.start)*100)),x.start,x.end); });
+    var md=LV[0].lord, ad=LV[1]?LV[1].lord:null, rel="";
+    if(ad&&ad===md) rel=' This is the lord\'s own sub-period, when its themes run undiluted.';
+    else if(ad&&D.P[md]&&D.P[ad]){
+      var dd=hFrom(D.P[ad].sign,D.P[md].sign);
+      rel=' The antardaśā lord sits in the '+ord(dd)+' from the mahādaśā lord — '+
+        ([6,8,12].indexOf(dd)>=0?'a 6/8/12 relation, which tradition reads as friction between the two themes':
+         [1,4,7,10,5,9].indexOf(dd)>=0?'a kendra/trikoṇa relation, which tradition reads as the two working together':
+         'a neutral relation')+'; naturally the two are '+natFriend(ad,md).toLowerCase()+'s.';
+    }
+    var nx=LV[1]?levelsAt(D,LV[1].end+0.01):null;
+    h+=note("Study note — the running period",
+      lordLine(md,D)+' sets the chapter; '+(ad?lordLine(ad,D)+' colours the current sub-period.':''),
+      rel+(nx&&nx[1]?' Next change: <b>'+esc(nx[0].lord)+' → '+esc(nx[1].lord)+'</b> from '+fdate(LV[1].end)+'.':'')+
+      ' A lord gives results for the houses it rules and occupies, weighted by its dignity and strength.',["dasha","bhava"]);
+  }
+  // slow movers
+  var rows=[];
+  ["Saturn","Jupiter","Rahu","Ketu"].forEach(function(en){
+    var t=transitOf(D,en); if(!t||!mo) return;
+    var sg=ridx(t.rashi), hl=hFrom(sg,D.LS), hm=hFrom(sg,mo.sign), fav=GOOD_FROM_MOON[en].indexOf(hm)>=0;
+    var bav=null; if(D.av&&D.av.bhinna) D.av.bhinna.forEach(function(b){ if(b.graha===en) bav=b.bindus[sg]; });
+    var nx=nextIngress(en,now);
+    rows.push('<tr><td><b>'+en+'</b>'+(t.retrograde&&en!=="Rahu"&&en!=="Ketu"?' ℞':'')+'</td><td>'+SA[sg]+'</td><td class="knum">'+hl+'</td>'+
+      '<td class="knum">'+hm+'</td><td style="color:'+(fav?"#1c6b46":"#a1493a")+';font-weight:600">'+(fav?"favourable":"not favourable")+'</td>'+
+      '<td class="knum">'+(D.av&&D.av.sarva?D.av.sarva[sg]:"—")+(bav!=null?' <span class="kmut">/ '+bav+' own</span>':'')+'</td>'+
+      '<td>'+(nx?fdate(nx.jd)+' → '+SA[nx.sign]:'—')+'</td></tr>');
+  });
+  if(rows.length){
+    h+='<h4 class="ksub">The slow planets over this chart</h4>'+
+      tbl(["Graha","In","From lagna","From Moon","Gochara","SAV of sign","Next sign"],rows)+
+      '<p class="klegend">Gochara is read from the natal Moon. A transit through a sign with 28+ sarvāṣṭakavarga bindus is '+
+      'classically better supported; the planet\'s own bindus (of 8) refine it.</p>';
+  }
+  // sade sati
+  try{
+    var cyc=lifeCycles(D), cur=null, nxt=null;
+    cyc.sade.forEach(function(r){ if(now>=r.s&&now<r.e) cur=r; else if(!nxt&&r.s>now) nxt=r; });
+    h+='<h4 class="ksub">Sade Sati</h4><p class="knote">'+
+      (cur?'<b>'+esc(SS_NAME[cur.k])+'</b> runs until about '+fmy(cur.e)+'. ':'No Sade Sati or dhaiyā phase is running. ')+
+      (nxt?'Next: '+esc(SS_NAME[nxt.k])+' from about '+fmy(nxt.s)+'.':'')+' '+tabLink("timeline","All phases on the life timeline")+'</p>';
+  }catch(e){}
+  h+='<h4 class="ksub">Today</h4><div class="kday-bar"><button type="button" class="k-btn sec" data-kday-geo="1">Use my current location</button>'+
+     '<span class="kmut" id="kday-msg"></span></div><div id="kday">'+dayBlock(D,D.input.lat,D.input.lon,D.input.tzHours,window.__kplace||"the birth place")+'</div>';
+  return h;
+}
+
+/* ================= 3. Life timeline ================= */
+var LCOL={Ketu:"#8a6a5c",Venus:"#b58fb0",Sun:"#c08a3e",Moon:"#8fa9c4",Mars:"#a1493a",Rahu:"#6a5a86",Jupiter:"#1c6b46",Saturn:"#4a5064",Mercury:"#2b7a6f"};
+var SSCOL={11:"#c9a24b",0:"#a1493a",1:"#c07a52",3:"#9a8f78",7:"#8a6a5c"};
+function lifeSvg(D,from,to,tree,cyc,zoom){
+  var W=900,L=96,R=12,x=function(jd){ return L+(jd-from)/(to-from)*(W-L-R); };
+  var lanes=[["Mahādaśā",26],["Antardaśā",18]]; if(zoom) lanes.push(["Pratyantar",12]);
+  lanes.push(["Sade Sati",14],["Returns",14]);
+  var y=22, Y={}; lanes.forEach(function(l){ Y[l[0]]=[y,l[1]]; y+=l[1]+8; });
+  var H=y+34, o='<svg viewBox="0 0 '+W+' '+H+'" class="kwsvg klife" role="img" aria-label="Life timeline">';
+  lanes.forEach(function(l){ o+='<text x="'+(L-8)+'" y="'+(Y[l[0]][0]+Y[l[0]][1]/2+3)+'" class="lab">'+l[0]+'</text>'; });
+  function bar(lane,s,e,col,label,tip,txtCol){
+    if(e<=from||s>=to) return; var a=x(Math.max(s,from)), b=x(Math.min(e,to)), w=b-a, yy=Y[lane][0], hh=Y[lane][1];
+    o+='<g><title>'+esc(tip)+'</title><rect x="'+a.toFixed(1)+'" y="'+yy+'" width="'+Math.max(w,0.8).toFixed(1)+'" height="'+hh+'" fill="'+col+'" stroke="#fff" stroke-width="0.6"/>';
+    if(label&&w>label.length*6+4) o+='<text x="'+(a+w/2).toFixed(1)+'" y="'+(yy+hh/2+3.5)+'" class="bl"'+(txtCol?' style="fill:'+txtCol+'"':'')+'>'+esc(label)+'</text>';
+    o+='</g>';
+  }
+  tree.forEach(function(md){
+    bar("Mahādaśā",Math.max(md.start,D.jd),md.end,LCOL[md.lord],md.lord,md.lord+" mahādaśā · "+fdate(Math.max(md.start,D.jd))+" → "+fdate(md.end));
+    (md.ads||[]).forEach(function(a){
+      bar("Antardaśā",a.start,a.end,LCOL[a.lord],zoom?md.lord.slice(0,2)+"–"+a.lord.slice(0,2):a.lord.slice(0,2),md.lord+" → "+a.lord+" · "+fdate(a.start)+" → "+fdate(a.end));
+      if(zoom&&a.end>from&&a.start<to) (a.pds||[]).forEach(function(p){
+        bar("Pratyantar",p.start,p.end,LCOL[p.lord],p.lord.slice(0,2),md.lord+" → "+a.lord+" → "+p.lord+" · "+fdate(p.start)+" → "+fdate(p.end)); });
+    });
+  });
+  cyc.sade.forEach(function(r){ bar("Sade Sati",r.s,r.e,SSCOL[r.k],r.k===3||r.k===7?"dh":"SS",SS_NAME[r.k]+" · "+fmy(r.s)+" → "+fmy(r.e)); });
+  cyc.returns.forEach(function(r){ bar("Returns",r.s,r.e,LCOL[r.k],r.k.slice(0,2),r.k+" return (transiting its natal sign) · "+fmy(r.s)+" → "+fmy(r.e)); });
+  // axis
+  var y0=jd2d(from).y, y1=jd2d(to).y, span=(to-from)/365.25, st=span>40?10:(span>12?2:1), by=D.input.year;
+  o+='<line x1="'+L+'" y1="'+(y+2)+'" x2="'+(W-R)+'" y2="'+(y+2)+'" stroke="#1d2340" stroke-width="1"/>';
+  for(var yr=Math.ceil(y0/st)*st; yr<=y1; yr+=st){ var jj=jdFrom(yr,1,1,0); if(jj<from||jj>to) continue; var xx=x(jj);
+    o+='<line x1="'+xx.toFixed(1)+'" y1="18" x2="'+xx.toFixed(1)+'" y2="'+(y+6)+'" stroke="#d9d1bb" stroke-width="0.7" stroke-dasharray="2 3"/>';
+    o+='<text x="'+xx.toFixed(1)+'" y="'+(y+16)+'" class="ty">'+yr+'</text><text x="'+xx.toFixed(1)+'" y="'+(y+27)+'" class="ta">age '+(yr-by)+'</text>'; }
+  if(D.nowJd>=from&&D.nowJd<=to){ var xn=x(D.nowJd);
+    o+='<line x1="'+xn.toFixed(1)+'" y1="14" x2="'+xn.toFixed(1)+'" y2="'+(y+4)+'" stroke="#a1493a" stroke-width="2"/>'+
+      '<text x="'+xn.toFixed(1)+'" y="10" class="now">now</text>'; }
+  return o+'</svg>';
+}
+function timelinePane(D){
+  var tree=buildTree(D); if(!tree) return "";
+  var cyc=lifeCycles(D), now=D.nowJd;
+  var whole=lifeSvg(D,D.jd,D.jd+100*365.25,tree,cyc,false);
+  var zoom=lifeSvg(D,now-3*365.25,now+10*365.25,tree,cyc,true);
+  // turning points in the next ten years
+  var ev=[], end=now+10*365.25;
+  tree.forEach(function(md){
+    if(md.start>now&&md.start<end) ev.push([md.start,"<b>"+md.lord+"</b> mahādaśā begins",lordLine(md.lord,D)]);
+    (md.ads||[]).forEach(function(a){ if(a.start>now&&a.start<end&&a.start!==md.start) ev.push([a.start,md.lord+" → <b>"+a.lord+"</b> antardaśā",lordLine(a.lord,D)]); });
+  });
+  cyc.sade.forEach(function(r){ if(r.s>now&&r.s<end) ev.push([r.s,"<b>"+SS_NAME[r.k]+"</b> begins","Saturn over the "+(r.k===11?"12th from":r.k===0?"natal":r.k===1?"2nd from":r.k===3?"4th from":"8th from")+" Moon, to about "+fmy(r.e)]); });
+  cyc.returns.forEach(function(r){ if(r.s>now&&r.s<end) ev.push([r.s,"<b>"+r.k+" return</b>",r.k+" back in its natal sign ("+SA[D.P[r.k].sign]+"), to about "+fmy(r.e)]); });
+  ev.sort(function(a,b){ return a[0]-b[0]; });
+  return '<p class="knote">One view of the whole life: Vimśottarī periods, Saturn\'s Sade Sati and dhaiyā phases, and the '+
+    'returns of Jupiter (≈12 years), Saturn (≈29½) and the nodes (≈18½) to their natal signs. Hover a band for its dates.</p>'+
+    '<div class="klifebar"><button type="button" class="k-btn sec on" data-klife="zoom">Next 10 years</button>'+
+    '<button type="button" class="k-btn sec" data-klife="whole">Whole life</button></div>'+
+    '<div class="klifev" data-klifev="zoom">'+zoom+'</div><div class="klifev" data-klifev="whole" hidden>'+whole+'</div>'+
+    '<h4 class="ksub">Turning points in the next ten years</h4>'+
+    (ev.length?tbl(["Date","Change","What the lord brings in this chart"],ev.map(function(e){
+      return '<tr><td>'+fdate(e[0])+'</td><td>'+e[1]+'</td><td class="kmut">'+e[2]+'</td></tr>'; })):'<p class="kmut">No change in the window.</p>')+
+    '<div class="kbox">Planet positions are scanned every 12 days, so phase edges are good to about two weeks; daśā dates follow the '+
+    'standard method in the '+secLink("Antardaśā & pratyantardaśā","daśā tree")+'. A period change marks a new theme, not an event.</div>';
+}
+
+/* ================= 5. Birth-time check ================= */
+var BT_CODES=[["D1","Rāśi — the house frame"],["D9","Navāṃśa — marriage, dharma"],["D10","Daśāṃśa — career"],
+  ["D7","Saptāṃśa — children"],["D12","Dvādaśāṃśa — parents"],["D60","Ṣaṣṭyāṃśa — finest karmic layer"]];
+function btClock(inp,offMin){ var t=inp.hour*60+inp.minute+offMin, s=Math.round(t*60); s=((s%86400)+86400)%86400;
+  return String(Math.floor(s/3600)).padStart(2,"0")+":"+String(Math.floor(s%3600/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0"); }
+function varEdges(D,code,range,step){
+  var inp=D.input, cache={};
+  function A(m){ var k=m.toFixed(5); if(cache[k]==null) cache[k]=window.__kAsc(inp,m); return cache[k]; }
+  function v(m){ return vargaLagna(code,A(m)); }
+  var v0=v(0);
+  function edge(dir){ for(var m=0; Math.abs(m)<range; m+=dir*step){ var n=m+dir*step;
+      if(v(n)!==v0){ var a=m,b=n; for(var k=0;k<14;k++){ var c=(a+b)/2; if(v(c)===v0) a=c; else b=c; } return {m:Math.abs(b),next:v(b)}; } }
+    return null; }
+  return {sign:v0,before:edge(-1),after:edge(1),A:A};
+}
+function lagnaMargins(D){
+  if(!window.__kAsc||D.input.hour==null) return null;
+  var e=varEdges(D,"D1",360,1); if(!e.before||!e.after) return null;
+  return {before:e.before.m,after:e.after.m,from:btClock(D.input,-e.before.m).slice(0,5),to:btClock(D.input,e.after.m).slice(0,5)};
+}
+function birthTimePane(D){
+  if(!window.__kAsc||D.input.hour==null) return '<p class="kmut">Needs the built-in engine.</p>';
+  var inp=D.input, rows=[], ruler='', RW=900, L=150, R=10, SPAN=60;
+  var xr=function(m){ return L+(m+SPAN)/(2*SPAN)*(RW-L-R); };
+  var shared=varEdges(D,"D1",360,1);
+  BT_CODES.forEach(function(c,ci){
+    var e=varEdges(D,c[0],360,c[0]==="D1"?1:0.25);
+    var b=e.before?e.before.m:null, a=e.after?e.after.m:null, mn=Math.min(b==null?999:b,a==null?999:a);
+    var verdict=mn<3?'<span class="kbad">fragile</span>':mn<10?'<span class="kmid">sensitive</span>':'<span class="kgood">steady</span>';
+    rows.push('<tr><td><b>'+c[0]+'</b> <span class="kmut">'+c[1]+'</span></td><td>'+SA[e.sign]+'</td>'+
+      '<td class="knum">'+(b!=null?btClock(inp,-b):"—")+' – '+(a!=null?btClock(inp,a):"—")+'</td>'+
+      '<td class="knum">'+(b!=null?'−'+b.toFixed(1)+' min → '+SA[e.before.next]:"—")+'</td>'+
+      '<td class="knum">'+(a!=null?'+'+a.toFixed(1)+' min → '+SA[e.after.next]:"—")+'</td><td>'+verdict+'</td></tr>');
+    // ruler row: signs across ±60 minutes
+    var y=24+ci*26, prev=null, segS=-SPAN;
+    ruler+='<text x="'+(L-8)+'" y="'+(y+12)+'" class="lab">'+c[0]+'</text>';
+    for(var m=-SPAN; m<=SPAN+0.001; m+=0.25){
+      var s=vargaLagna(c[0],shared.A(m));
+      if(prev!==null&&(s!==prev||m>=SPAN)){
+        var x1=xr(segS), x2=xr(m), w=x2-x1;
+        ruler+='<g><title>'+c[0]+' lagna '+SA[prev]+' · '+btClock(inp,segS).slice(0,5)+' – '+btClock(inp,m).slice(0,5)+'</title>'+
+          '<rect x="'+x1.toFixed(1)+'" y="'+y+'" width="'+w.toFixed(1)+'" height="18" fill="'+(prev===e.sign?"#e9dcb5":(prev%2?"#dfe6ef":"#eef1f5"))+'" stroke="#fff"/>';
+        if(w>34) ruler+='<text x="'+(x1+w/2).toFixed(1)+'" y="'+(y+12.5)+'" class="bl" style="fill:#1d2340">'+SA[prev].slice(0,4)+'</text>';
+        ruler+='</g>'; segS=m;
+      }
+      prev=s;
+    }
+  });
+  var H=24+BT_CODES.length*26+26;
+  var svg='<svg viewBox="0 0 '+RW+' '+H+'" class="kwsvg kruler" role="img" aria-label="Varga lagnas across an hour either side of the birth time">'+ruler;
+  for(var t=-SPAN;t<=SPAN;t+=15){ var xx=xr(t);
+    svg+='<line x1="'+xx.toFixed(1)+'" y1="20" x2="'+xx.toFixed(1)+'" y2="'+(H-22)+'" stroke="#cfc6ad" stroke-width="0.7" stroke-dasharray="2 3"/>'+
+      '<text x="'+xx.toFixed(1)+'" y="'+(H-8)+'" class="ty">'+(t===0?"birth":(t>0?"+":"−")+Math.abs(t)+"m")+'</text>'; }
+  svg+='<line x1="'+xr(0).toFixed(1)+'" y1="16" x2="'+xr(0).toFixed(1)+'" y2="'+(H-20)+'" stroke="#a1493a" stroke-width="2"/></svg>';
+  // Moon: nakshatra-pada window and dasha sensitivity
+  var mtxt='';
+  try{
+    var mo=D.P.Moon, seg=10/3, p0=Math.floor(mo.sid/seg);
+    var pAt=function(min){ var s=sidAt("Moon",D.jd+min/1440); return Math.floor(s/seg); };
+    var edgeM=function(dir){ for(var m=0;Math.abs(m)<2880;m+=dir*10){ var n=m+dir*10; if(pAt(n)!==p0){ var a=m,b=n;
+      for(var k=0;k<12;k++){ var c=(a+b)/2; if(pAt(c)===p0) a=c; else b=c; } return Math.abs(b);} } return null; };
+    var mb=edgeM(-1), ma=edgeM(1);
+    var spd=(mo.speed!=null?mo.speed:13.2), lord=D.birthNak.lord;
+    var shift=(1/1440-VY[lord]*spd/1440/(40/3)*DPY)*10;   // days the daśā dates move per 10 minutes later
+    mtxt='<h4 class="ksub">The Moon and the daśā dates</h4><p class="knote">The Moon stays in <b>'+esc(mo.nak)+' pāda '+mo.pada+'</b> for birth times '+
+      (mb!=null?'from '+fmtMin(inp,-mb):'')+(ma!=null?' to '+fmtMin(inp,ma):'')+', so the daśā <i>sequence</i> is settled unless the time is off by '+
+      (Math.min(mb||9e9,ma||9e9)/60).toFixed(1)+' hours or more. The daśā <i>dates</i> move with every minute: each 10 minutes later '+
+      'shifts every period boundary about <b>'+Math.abs(shift).toFixed(0)+' days '+(shift<0?'earlier':'later')+'</b>.</p>';
+  }catch(e){}
+  var d1=varEdges(D,"D1",360,1), tip='';
+  if(d1.before&&d1.after){ var mm=Math.min(d1.before.m,d1.after.m);
+    tip=mm<5?'The lagna itself is on a knife-edge: an error of '+mm.toFixed(1)+' minutes flips the rising sign and every house. Treat house-based readings as provisional until the time is confirmed.':
+      mm<15?'The lagna has a working margin but not a large one; verify the recorded time (hospital record, not memory) before relying on houses.':
+      'The lagna is secure against ordinary rounding. The finer divisions below are where birth-time error bites.'; }
+  return '<p class="knote">How much of this chart depends on the exact minute of birth? The engine recomputes the lagna of each '+
+    'division for times either side of the one entered, and shows when it would change. The finer the division, the tighter the window.</p>'+
+    note("Study note — reading the margins",tip,'Recorded birth times are often rounded to the nearest 5 or 15 minutes. A varga whose window is narrower than '+
+      'that rounding cannot be trusted; D60 changes about every two minutes, so it is only meaningful with a rectified time.',["varga","lagna"])+
+    tbl(["Division","Lagna","Holds for birth times","Earlier edge","Later edge","Margin"],rows)+
+    '<h4 class="ksub">An hour either side</h4>'+svg+
+    '<p class="klegend">Gold marks the sign given by the entered time. Each band is one lagna sign for that division.</p>'+mtxt+
+    '<h4 class="ksub">Recast at a nearby time</h4><div class="kday-bar">'+
+    [-15,-5,-2,2,5,15].map(function(s){ return '<button type="button" class="k-btn sec" data-kshift="'+s+'">'+(s>0?"+":"−")+Math.abs(s)+' min</button>'; }).join("")+
+    '</div><p class="klegend">This changes the time in the form and recasts; the form keeps the new time. Use '+tabLink("events","Life events")+
+    ' to test which candidate time the dated events fit best.</p>';
+}
+function fmtMin(inp,m){ var d=Math.floor((inp.hour*60+inp.minute+m)/1440);
+  return btClock(inp,m).slice(0,5)+(d<0?' the day before':d>0?' the next day':''); }
+
+/* ================= 9. Reading path ================= */
+function pathPane(D,J){
+  var LS=D.LS, ll=LORD[LS], lp=D.P[ll], mo=D.P.Moon, steps=[];
+  function step(title,method,here,tryit,learn,see){
+    steps.push({t:title,b:'<div class="kstep-cols"><div><h5>The method</h5><p>'+method+'</p></div><div><h5>In this chart</h5><p>'+here+'</p></div></div>'+
+      '<div class="kstep-try"><b>Try this</b> '+tryit+'</div><div class="kasrc">'+learn.map(pageLink).join(" ")+' '+see+'</div>'});
+  }
+  var in1=D.planets.filter(function(p){ return p.house===1; }).map(function(p){ return p.en; });
+  var asp1=aspectedBy(D,1);
+  step("The lagna","The lagna — the sign rising in the east at birth — becomes the 1st house. It fixes which house every planet "+
+    "falls in and which houses each planet rules, so every later step is counted from here.",
+    '<b>'+SA[LS]+'</b> ('+SIGNS[LS]+') rises at '+dm(D.lagDeg)+', in '+padaLink(D.lagNak.name,D.lagNak.pada)+'. '+
+    (in1.length?'In the 1st: '+list(in1)+'. ':'The 1st is empty. ')+(asp1.length?'Aspecting it: '+list(asp1)+'.':'No planet aspects it.'),
+    "Find the top diamond of the chart on the Overview tab and click it. Which planets touch the 1st? They colour the whole temperament.",
+    ["lagna","bhava"],secLink("The chart"));
+  step("The lagna lord","The ruler of the rising sign is the chart's pilot. The house it occupies shows where the person's energy "+
+    "habitually goes; its dignity shows how comfortably it gets there.",
+    lordLine(ll,D)+'. '+(lp?'So the self is tied to the '+ord(lp.house)+' — '+HSIG[lp.house]+'. It stands on '+DIGM[lp.dig]+'.':''),
+    "Read the significations of the house the lagna lord occupies. Which of them are recurring themes in the person's life?",
+    ["dignity","bhava"],secLink("Grahas"));
+  var kem=D.yogas.filter(function(y){ return y.key==="Kemadruma"; })[0];
+  step("The Moon","The Moon is the mind and the body's rhythms, and in Jyotiṣa it is almost a second lagna: transits and daśās are "+
+    "read from it. Its sign, nakṣatra, brightness and company matter most.",
+    mo?'Moon in <b>'+SA[mo.sign]+'</b>, '+padaLink(mo.nak,mo.pada)+', the '+ord(mo.house)+' house, '+DIGW[mo.dig]+'; '+
+      (isWaxing(D)?'waxing, which BPHS counts as benefic':'waning, which BPHS counts as weaker')+'. '+
+      (aspectedBy(D,mo.house).length?'Aspected by '+list(aspectedBy(D,mo.house).filter(function(x){return x!=="Moon";}))+'. ':'')+
+      (kem?(kem.present?'Kemadruma is formed — the Moon stands alone.':'Kemadruma is not formed — '+esc(kem.detail)+'.'):''):'—',
+    "Compare the chart from the Moon (Chandra kuṇḍalī) with the lagna chart. Do the same houses stand out in both?",
+    ["graha","sp"],secLink("Chandra & Sūrya kuṇḍalī"));
+  var sb=sbOf(J);
+  step("Strength","Before judging what a planet promises, judge whether it can deliver. Ṣaḍbala measures six kinds of strength "+
+    "against a classical minimum; dignity and vargottama add quality.",
+    (sb?'Above their minimum: '+list(sb.filter(function(p){return p.ratio>=1;}).map(function(p){ return p.graha+' ('+p.ratio.toFixed(2)+')'; }))+'. '+
+      (sb.filter(function(p){return p.ratio<1;}).length?'Below: '+list(sb.filter(function(p){return p.ratio<1;}).map(function(p){ return p.graha+' ('+p.ratio.toFixed(2)+')'; }))+'. ':''):'')+
+    (D.vargottama.length?'Vargottama: '+list(D.vargottama)+'.':'No planet is vargottama.'),
+    "Take the strongest planet and list the houses it rules. Those matters have the most dependable support in this chart.",
+    ["strength","dignity"],secLink("Ṣaḍbala"));
+  var pres=D.yogas.filter(function(y){ return y.present; });
+  step("Yogas","A yoga is a named combination of lords and houses. It is a promise that needs strength to be real and a daśā of one of its "+
+    "planets to be delivered.",
+    pres.length?pres.map(function(y){ return '<b>'+esc(y.iast||y.key)+'</b>: '+esc(y.detail); }).join('<br>'):'No catalogued yoga forms here — which is common and says nothing bad on its own.',
+    "For each yoga formed, find the daśā periods of the planets that make it on the Life timeline tab. That is when tradition expects it to show.",
+    ["yoga","dasha"],secLink("Yogas"));
+  var LV=levelsAt(D,D.nowJd);
+  step("The running daśā","The Vimśottarī daśā says which planet's agenda is live. A lord gives the results of the houses it rules and "+
+    "occupies, filtered by its strength; the antardaśā lord adds its own colour.",
+    LV&&LV[1]?lordLine(LV[0].lord,D)+' runs the mahādaśā to '+fmy(LV[0].end)+'; '+lordLine(LV[1].lord,D)+' the antardaśā to '+fmy(LV[1].end)+'.':'—',
+    "Look back at the last antardaśā change. Did the themes of the new lord's houses come forward? Log it on the Life events tab.",
+    ["dasha","bhava"],secLink("Vimśottarī daśā"));
+  var sat=transitOf(D,"Saturn"), jup=transitOf(D,"Jupiter");
+  step("Transits","Transits (gochara) trigger what the daśā has made ready. Slow planets matter most; they are read from the natal Moon "+
+    "and weighed by ashtakavarga bindus.",
+    sat&&jup&&mo?'Saturn transits the '+ord(hFrom(ridx(sat.rashi),mo.sign))+' from the Moon ('+(D.av?D.av.sarva[ridx(sat.rashi)]+' bindus':'')+'), '+
+      'Jupiter the '+ord(hFrom(ridx(jup.rashi),mo.sign))+' ('+(D.av?D.av.sarva[ridx(jup.rashi)]+' bindus':'')+').'+
+      (D.sade&&D.sade.active?' A Sade Sati or dhaiyā phase is running.':''):'—',
+    "Open the Now tab. Is the running daśā lord also being transited by Saturn or Jupiter? That overlap is where tradition looks first.",
+    ["av","aspect"],secLink("Gochara"));
+  var nav='<div class="kpath-nav" role="tablist">'+steps.map(function(s,i){
+    return '<button type="button" data-kstep-go="'+(i+1)+'"'+(i===0?' class="on"':'')+'><span>'+(i+1)+'</span>'+esc(s.t)+'</button>'; }).join("")+'</div>';
+  var body=steps.map(function(s,i){ return '<div class="kstep" data-kstep="'+(i+1)+'"'+(i?' hidden':'')+'><h4 class="ksub">Step '+(i+1)+' of '+steps.length+' — '+esc(s.t)+'</h4>'+s.b+'</div>'; }).join("");
+  return '<p class="knote">A first reading, in the order a teacher would take it. Each step pairs the method (from this site\'s reference '+
+    'pages) with what it finds in this chart.</p><div class="kpath">'+nav+body+
+    '<div class="kpath-foot"><button type="button" class="k-btn sec" data-kstep-go="prev" disabled>← Previous</button>'+
+    '<button type="button" class="k-btn" data-kstep-go="next">Next step →</button></div></div>';
+}
+
+/* ================= 6. Life events ================= */
+var EVK={career:["Career or work",[10,6,2,11]],study:["Education",[4,5,9]],relationship:["Relationship or marriage",[7,2,11]],
+  children:["Children",[5,9]],home:["Home or property",[4]],move:["Move, travel or abroad",[3,9,12]],money:["Money or gains",[2,11]],
+  health:["Health",[1,6,8]],loss:["Loss or bereavement",[8,12]],spiritual:["Spiritual turn",[9,12,5]],other:["Other",[]]};
+function lordTouches(D,lord,houses){
+  var hit=[], p=D.P[lord];
+  (D.owns[lord]||[]).forEach(function(h){ if(houses.indexOf(h)>=0) hit.push("owns "+ord(h)); });
+  if(p&&houses.indexOf(p.house)>=0) hit.push("sits in "+ord(p.house));
+  if((lord==="Rahu"||lord==="Ketu")&&p){ var disp=LORD[p.sign]; (D.owns[disp]||[]).forEach(function(h){ if(houses.indexOf(h)>=0) hit.push("dispositor owns "+ord(h)); }); }
+  return hit;
+}
+function eventsAnalyze(D,list0){
+  if(!list0.length) return '<p class="kmut">No events yet. Add a few dated turning points — a first job, a move, a marriage, a loss — and the '+
+    'page will show what was running at each.</p>';
+  var tree=buildTree(D), tz=D.input.tzHours, rows=[], linked=0, chance=0, n=0;
+  // share of the life (first 80 years) in which the MD or AD lord touches a set of houses — the chance baseline
+  function baseline(houses){ var tot=0, hit=0, lim=D.jd+80*365.25;
+    tree.forEach(function(md){ (md.ads||[]).forEach(function(a){ var s=Math.max(a.start,D.jd), e=Math.min(a.end,lim); if(e<=s) return;
+      tot+=e-s; if(lordTouches(D,md.lord,houses).length||lordTouches(D,a.lord,houses).length) hit+=e-s; }); });
+    return tot?hit/tot:0; }
+  var list=list0.map(function(e,i){ return {e:e,i:i}; }).sort(function(a,b){ return a.e.d<b.e.d?-1:1; });
+  list.forEach(function(it){
+    var e=it.e, p=e.d.split("-"), jd=jdFrom(+p[0],+p[1],+p[2],12-tz), cat=EVK[e.k]||EVK.other, hs=cat[1];
+    var LV=levelsAt(D,jd), sat=signAt("Saturn",jd), jup=signAt("Jupiter",jd);
+    var links=[];
+    if(LV){ LV.slice(0,3).forEach(function(l,k){ var t=lordTouches(D,l.lord,hs); if(t.length) links.push(["MD","AD","PD"][k]+" "+l.lord+" "+t.join(", ")); }); }
+    [["Saturn",sat],["Jupiter",jup]].forEach(function(t){ if(t[1]==null) return; var hl=hFrom(t[1],D.LS);
+      if(hs.indexOf(hl)>=0) links.push(t[0]+" transits the "+ord(hl)); });
+    var main=LV&&(lordTouches(D,LV[0].lord,hs).length||(LV[1]&&lordTouches(D,LV[1].lord,hs).length));
+    if(hs.length&&LV&&jd>=D.jd){ n++; if(main) linked++; chance+=baseline(hs); }
+    rows.push('<tr><td>'+esc(e.d)+'</td><td><b>'+esc(e.t||"(untitled)")+'</b><br><span class="kmut">'+esc(cat[0])+(hs.length?' · houses '+hs.join(", "):'')+'</span></td>'+
+      '<td>'+(jd<D.jd?'<span class="kmut">before birth</span>':LV?LV.slice(0,3).map(function(l){ return esc(l.lord); }).join(" → "):"—")+'</td>'+
+      '<td class="kmut">'+(sat!=null?'Sa '+ord(hFrom(sat,D.P.Moon.sign))+' · Ju '+ord(hFrom(jup,D.P.Moon.sign)):"—")+'</td>'+
+      '<td>'+(links.length?'<span class="kgood">'+esc(links.join("; "))+'</span>':(hs.length?'<span class="kmut">no link</span>':'—'))+'</td>'+
+      '<td><button type="button" class="kev-del" data-kev-del="'+it.i+'" aria-label="Remove event">✕</button></td></tr>');
+  });
+  var sum='';
+  if(n){ var exp=chance/n;
+    sum=note("Study note — what the events show",
+      '<b>'+linked+' of '+n+'</b> categorised events fell in a mahādaśā or antardaśā whose lord owns or occupies one of the event\'s houses. '+
+      'By chance alone you would expect about <b>'+(exp*n).toFixed(1)+'</b> ('+Math.round(exp*100)+'% of this life\'s periods touch such houses).',
+      'Each lord touches two or three houses, so links often appear by chance — that is why the baseline is shown. A pattern across '+
+      'many events means more than any single hit. If the fit is poor, check the birth time on the Birth-time check tab: the daśā '+
+      'dates shift with it. This is a way to test the method against a life, not proof of it.',["dasha","bhava"]); }
+  return tbl(["Date","Event","MD → AD → PD","Saturn · Jupiter from Moon","Links to the event's houses",""],rows)+sum;
+}
+function eventsPane(){
+  var opts=Object.keys(EVK).map(function(k){ return '<option value="'+k+'">'+esc(EVK[k][0])+'</option>'; }).join("");
+  return '<p class="knote">Test the method against a real life. Add dated events; for each, the page shows the daśā running then, where '+
+    'Saturn and Jupiter were, and whether the period lords are tied to the houses that kind of event belongs to. Events are kept only in '+
+    'this browser, for this chart.</p>'+
+    '<div class="kev-form"><label>Date<input type="date" id="kev-date"></label>'+
+    '<label class="kev-wide">What happened<input type="text" id="kev-label" maxlength="80" placeholder="e.g. First job, moved to Pune"></label>'+
+    '<label>Kind<select id="kev-kind">'+opts+'</select></label>'+
+    '<button type="button" class="k-btn" id="kev-add">Add event</button></div><div id="kev-out"></div>';
+}
+
+/* ================= 11. Compatibility (Aṣṭakūṭa) ================= */
+var VAR_RANK={Brahmin:4,Kshatriya:3,Vaishya:2,Shudra:1};
+var VASH_I={Chatushpada:0,Nara:1,Jalachara:2,Vanachara:3,Keeta:4};
+var VASH_T=[[2,1,1,0.5,1],[1,2,0.5,0,1],[1,0.5,2,1,1],[0,0,0,2,0],[1,1,1,0,2]];   // rows: boy, cols: girl
+var YONI=["Horse","Elephant","Sheep","Serpent","Dog","Cat","Rat","Cow","Buffalo","Tiger","Deer","Monkey","Mongoose","Lion"];
+var YONI_T=[[4,2,2,3,2,2,2,1,0,1,3,3,2,1],[2,4,3,3,2,2,2,2,3,1,2,3,2,0],[2,3,4,2,1,2,1,3,3,1,2,0,3,1],[3,3,2,4,2,1,1,1,1,2,2,2,0,2],
+  [2,2,1,2,4,2,1,2,2,1,0,2,1,1],[2,2,2,1,2,4,0,2,2,1,3,3,2,1],[2,2,1,1,1,0,4,2,2,2,2,2,1,2],[1,2,3,1,2,2,2,4,3,0,3,2,2,1],
+  [0,3,3,1,2,2,2,3,4,1,2,2,2,1],[1,1,1,2,1,1,2,0,1,4,1,1,2,1],[3,2,2,2,0,3,2,3,2,1,4,2,2,1],[3,3,0,2,2,3,2,2,2,1,2,4,3,2],
+  [2,2,3,0,1,2,1,2,2,2,2,3,4,2],[1,0,1,2,1,1,2,1,1,1,1,2,2,4]];
+var GANA_I={Deva:0,Manushya:1,Rakshasa:2}, GANA_T=[[6,6,0],[5,6,0],[1,0,6]];      // rows: boy, cols: girl
+function vashyaOf(sign,deg){ var v=VASHYA[sign]; if(v.indexOf("/")<0) return v; var p=v.split("/"); return deg<15?p[0]:p[1]; }
+function maitriRel(a,b){ if(a===b) return "same"; return FR[a].indexOf(b)>=0?"friend":(EM[a].indexOf(b)>=0?"enemy":"neutral"); }
+function maitriPts(a,b){ var x=maitriRel(a,b), y=maitriRel(b,a);
+  if(x==="same") return 5; var k=[x,y].sort().join("-");
+  return {"friend-friend":5,"friend-neutral":4,"neutral-neutral":3,"enemy-friend":1,"enemy-neutral":0.5,"enemy-enemy":0}[k]; }
+function kutaPerson(sid,lagSid,marsSid,name){
+  var sg=Math.floor(sid/30)%12, n=nakOf(sid);
+  return {name:name,sid:sid,sign:sg,deg:sid%30,nak:n,varna:VARNA[sg],vashya:vashyaOf(sg,sid%30),yoni:NAKY[n.idx],gana:NAKG[n.idx],nadi:NAKN[n.idx],lord:LORD[sg],
+    lag:lagSid!=null?Math.floor(lagSid/30)%12:null,mars:marsSid!=null?Math.floor(marsSid/30)%12:null};
+}
+function matchHtml(D,J2,opt){
+  var gk=function(k){ var g=(J2.grahas||[]).filter(function(x){ return EN[x.key]===k; })[0]; return g?g.sidereal_deg:null; };
+  var A=kutaPerson(D.P.Moon.sid,D.lagna.sidereal_deg,D.P.Mars?D.P.Mars.sid:null,opt.nameA||"This chart");
+  var B=kutaPerson(gk("Moon"),J2.lagna?J2.lagna.sidereal_deg:null,gk("Mars"),opt.nameB||"Partner");
+  var boy=opt.aIsBoy?A:B, girl=opt.aIsBoy?B:A;
+  var K=[];
+  var vp=VAR_RANK[boy.varna]>=VAR_RANK[girl.varna]?1:0;
+  K.push(["Varṇa",1,vp,boy.varna,girl.varna,"Temperament and vocation class of the Moon sign. Full point when the boy's class is equal or higher."]);
+  K.push(["Vaśya",2,VASH_T[VASH_I[boy.vashya]][VASH_I[girl.vashya]],boy.vashya,girl.vashya,"Mutual pull or influence, from the Moon sign's animal group."]);
+  var cg=((boy.nak.idx-girl.nak.idx+27)%27)+1, cb=((girl.nak.idx-boy.nak.idx+27)%27)+1, bad=[3,5,7];
+  var tp=(bad.indexOf(cg%9)<0?1.5:0)+(bad.indexOf(cb%9)<0?1.5:0);
+  K.push(["Tārā",3,tp,boy.nak.name,girl.nak.name,"Counted each way between the birth stars; a count falling on the 3rd, 5th or 7th tārā loses 1½."]);
+  K.push(["Yoni",4,YONI_T[YONI.indexOf(boy.yoni)][YONI.indexOf(girl.yoni)],boy.yoni,girl.yoni,"Instinctive and physical compatibility, from the nakṣatra animals."]);
+  var mp=maitriPts(boy.lord,girl.lord);
+  K.push(["Graha maitrī",5,mp,boy.lord,girl.lord,"Natural friendship between the Moon-sign lords — the mental rapport."]);
+  K.push(["Gaṇa",6,GANA_T[GANA_I[boy.gana]][GANA_I[girl.gana]],boy.gana,girl.gana,"Deva, Manuṣya or Rākṣasa nature of the birth star."]);
+  var dd=hFrom(boy.sign,girl.sign), bk=[2,12,5,9,6,8].indexOf(dd)>=0?0:7;
+  K.push(["Bhakūṭa",7,bk,SA[boy.sign],SA[girl.sign],"Distance between the Moon signs; 2/12, 5/9 and 6/8 score nothing."]);
+  var np=boy.nadi===girl.nadi?0:8;
+  K.push(["Nāḍī",8,np,boy.nadi,girl.nadi,"Constitution (Ādi, Madhya, Antya); the same nāḍī scores nothing."]);
+  var tot=K.reduce(function(s,k){ return s+k[2]; },0);
+  var rows=K.map(function(k){ var pc=k[2]/k[1];
+    return '<tr><td><b>'+k[0]+'</b></td><td>'+esc(k[3])+'</td><td>'+esc(k[4])+'</td>'+
+      '<td class="knum" style="font-weight:700;color:'+(pc>=0.75?"#1c6b46":pc>=0.4?"#b08a2e":"#a1493a")+'">'+k[2]+' / '+k[1]+'</td><td class="kmut">'+k[5]+'</td></tr>'; });
+  var sameLordOrFriends=boy.lord===girl.lord||(maitriRel(boy.lord,girl.lord)==="friend"&&maitriRel(girl.lord,boy.lord)==="friend");
+  var exc=[];
+  if(np===0) exc.push('<b>Nāḍī</b> scores 0. Commonly cited exceptions — same Moon sign with different nakṣatras: '+
+    (boy.sign===girl.sign&&boy.nak.idx!==girl.nak.idx?'<span class="kgood">holds</span>':'does not hold')+'; same nakṣatra in different pādas: '+
+    (boy.nak.idx===girl.nak.idx&&boy.nak.pada!==girl.nak.pada?'<span class="kgood">holds</span>':'does not hold')+'; same Moon-sign lord: '+
+    (boy.lord===girl.lord?'<span class="kgood">holds</span>':'does not hold')+'.');
+  if(bk===0) exc.push('<b>Bhakūṭa</b> scores 0. Commonly cited exception — Moon-sign lords the same or mutual friends: '+
+    (sameLordOrFriends?'<span class="kgood">holds</span>':'does not hold')+'.');
+  if(GANA_T[GANA_I[boy.gana]][GANA_I[girl.gana]]<=1) exc.push('<b>Gaṇa</b> scores '+GANA_T[GANA_I[boy.gana]][GANA_I[girl.gana]]+
+    '. Commonly cited exception — Moon-sign lords the same or mutual friends: '+(sameLordOrFriends?'<span class="kgood">holds</span>':'does not hold')+'.');
+  function kuja(P){ if(P.mars==null) return "—"; var fl=P.lag!=null?hFrom(P.mars,P.lag):null, fm=hFrom(P.mars,P.sign), set=[1,2,4,7,8,12];
+    return 'Mars in the '+(fl?ord(fl)+' from lagna':'?')+', '+ord(fm)+' from Moon — '+
+      ((fl&&set.indexOf(fl)>=0)||set.indexOf(fm)>=0?'<b>placement tested positive</b>':'not in the tested houses'); }
+  var band=(tot>=18?"at or above":"below")+" the traditional threshold of 18";
+  return '<div class="kcards"><div class="kcard"><div class="k">Guṇa total</div><div class="v">'+tot+' / 36</div><div class="s">'+band+'</div></div>'+
+    '<div class="kcard"><div class="k">'+esc(A.name)+'</div><div class="v">'+SA[A.sign]+'</div><div class="s">'+esc(A.nak.name)+' pāda '+A.nak.pada+(opt.aIsBoy?' · boy\'s column':' · girl\'s column')+'</div></div>'+
+    '<div class="kcard"><div class="k">'+esc(B.name)+'</div><div class="v">'+SA[B.sign]+'</div><div class="s">'+esc(B.nak.name)+' pāda '+B.nak.pada+(opt.aIsBoy?' · girl\'s column':' · boy\'s column')+'</div></div></div>'+
+    '<div class="kmbar"><span style="width:'+(tot/36*100).toFixed(1)+'%"></span><i style="left:50%"></i></div>'+
+    tbl(["Kūṭa","Boy","Girl","Points","What it compares"],rows)+
+    (exc.length?'<h4 class="ksub">Doṣas and their tested exceptions</h4><ul class="kmlist">'+exc.map(function(x){ return '<li>'+x+'</li>'; }).join("")+'</ul>':'')+
+    '<h4 class="ksub">Mars placement (Kuja)</h4><ul class="kmlist"><li>'+esc(A.name)+': '+kuja(A)+'</li><li>'+esc(B.name)+': '+kuja(B)+'</li></ul>'+
+    '<p class="klegend">Mars in the 1st, 2nd, 4th, 7th, 8th or 12th is the placement tradition tests; texts list many cancellations, and a '+
+    'placement in both charts is traditionally held to balance.</p>'+
+    '<div class="kbox kwarn"><b>How to read this</b>Aṣṭakūṭa compares only the two Moons — one factor among the whole of two charts. '+
+    'It is a traditional screening method, taught here for study. It is not a verdict on any relationship, and no decision about a '+
+    'real person should rest on it. Tables differ between editions (especially Vaśya and Gaṇa); the ones used here are the commonly printed set.</div>';
+}
+function matchPane(){
+  return '<p class="knote">The traditional eight-fold (Aṣṭakūṭa) comparison of two birth Moons, scored out of 36. Enter the second '+
+    'person\'s birth details; nothing is sent anywhere. The classical tables are written for a boy and a girl, and some kūṭas are not '+
+    'symmetric, so choose which column each person takes.</p>'+
+    '<div class="k-form kmatch-form">'+
+    '<div class="k-full"><label for="km-name">Second person\'s name (optional)</label><input type="text" id="km-name" autocomplete="off"></div>'+
+    '<div><label for="km-dob">Date of birth</label><input type="date" id="km-dob"></div>'+
+    '<div><label for="km-tob">Time of birth</label><input type="time" id="km-tob" step="60"></div>'+
+    '<div class="k-full"><label for="km-search">Place of birth</label><div class="k-searchrow"><input type="text" id="km-search" placeholder="Type a city name" autocomplete="off">'+
+    '<button type="button" class="k-btn sec" id="km-searchbtn">Search</button></div><div id="km-results" class="k-results"></div><p class="klegend" id="km-note"></p></div>'+
+    '<div><label for="km-lat">Latitude</label><input type="number" id="km-lat" step="0.0001"></div>'+
+    '<div><label for="km-lon">Longitude</label><input type="number" id="km-lon" step="0.0001"></div>'+
+    '<div><label for="km-tz">UTC offset</label><input type="number" id="km-tz" step="0.25"></div>'+
+    '<div class="k-full"><label for="km-role">This chart takes the</label><select id="km-role"><option value="boy">boy\'s column</option><option value="girl">girl\'s column</option></select></div>'+
+    '<div class="k-full"><button type="button" class="k-btn" id="km-go">Compare the two Moons</button></div></div><div id="km-out"></div>';
+}
+
 /* ---------- main ---------- */
 window.__deriveForExport=deriveForExport;
 window.buildKundliReport=function(J){
-  __secN=0; __secList=[];
+  __secN=0; __secList=[]; __secUsed={};
   var D=derive(J),LS=D.LS,H=[];
   H.push('<div class="kreport" id="kreport">');
   H.push('<div class="katoggle"><button type="button" id="k-depth" class="k-btn sec" aria-pressed="false">Show detailed analysis</button>'+
@@ -2963,6 +3754,7 @@ window.buildKundliReport=function(J){
   if(cm)H.push('<div class="kcard"><div class="k">Current mahādaśā</div><div class="v">'+esc(cm.lord)+'</div><div class="s">to '+fmy(cm.end)+(D.nextMd?' · then '+esc(D.nextMd.lord):'')+'</div></div>');
   if(D.av&&D.av.sarva_total!=null)H.push('<div class="kcard"><div class="k">Ashtakavarga total</div><div class="v">'+D.av.sarva_total+'</div><div class="s">expected 337</div></div>');
   H.push('</div>');
+  var HEAD=H.splice(0,H.length);   // report head (toggle + vitals) sits above the tabs; H now collects the full report
   H.push('<!--KINDEX-->');
   H.push(sec("Birth particulars","computed from the chart's own longitudes",basicsSection(D,J)));
   H.push(sec("Special ascendants","computed lagnas",specialLagnaSection(D,J)));
@@ -3140,8 +3932,31 @@ window.buildKundliReport=function(J){
   if((J.substrate_stamp||"").indexOf("LearnHoro built-in")>=0)
     H.push('<div class="kbox"><b>Computed in your browser</b>Every figure here — positions, ashtakavarga, yogas, Bhay\u0101ta/Bhabhoga and the da\u015b\u0101 tree — was computed locally by the built-in engine (astronomy-engine, MIT) with the Lahiri ayan\u0101\u1e43\u015ba fitted to Swiss Ephemeris; no network call was made. \u0100r\u016b\u1e0dha exception cases follow the rule this site documents (the 4th from the house when the pada falls in the 7th), which differs from the remote engine\'s convention.</div>');
   H.push('<div class="kbox kwarn"><b>What this is</b>A technical presentation of a traditional system, for study and reflection — not a prediction, diagnosis, or basis for medical, financial, legal or personal decisions. Positions and engine-computed values come from the chart engine; houses, nakṣatra-pādas, combustion, Moolatrikona by degree and the daśā sequence are recomputed here. Charts with planets at sign edges are sensitive to the exact birth time.</div>');
-  H.push('</div>');
-  return H.join("").replace('<!--KINDEX-->', sectionIndex());
+  var full=H.join("").replace('<!--KINDEX-->', sectionIndex());
+  // runtime hooks for the interactive panes (events, compatibility, today's tools)
+  window.__kApi={
+    events:function(list){ try{ return eventsAnalyze(D,list||[]); }catch(e){ return paneErr("Life events",e); } },
+    match:function(J2,opt){ return matchHtml(D,J2,opt||{}); },
+    dayBlock:function(lat,lon,tz,label){ return dayBlock(D,lat,lon,tz,label); }
+  };
+  function pane(fn,name){ try{ return fn(); }catch(e){ return paneErr(name,e); } }
+  var PANES=[
+    ["overview","Overview",function(){ return glancePane(D,J)+'<h4 class="ksub">Explore the chart</h4>'+interactiveChart(D,J); }],
+    ["now","Now",function(){ return nowPane(D,J); }],
+    ["timeline","Life timeline",function(){ return timelinePane(D); }],
+    ["path","Reading path",function(){ return pathPane(D,J); }],
+    ["events","Life events",function(){ return eventsPane(); }],
+    ["btime","Birth-time check",function(){ return birthTimePane(D); }],
+    ["match","Compatibility",function(){ return matchPane(); }],
+    ["full","Full report",function(){ return full; }]
+  ];
+  var tabs='<div class="ktabs" role="tablist" aria-label="Report views">'+PANES.map(function(p,i){
+    return '<button type="button" role="tab" id="kt-'+p[0]+'" data-ktab="'+p[0]+'" aria-controls="kp-'+p[0]+'" aria-selected="'+(i?"false":"true")+'"'+
+      (i?' tabindex="-1"':' class="on"')+'>'+esc(p[1])+(p[0]==="full"?' <span class="kmut">('+__secList.length+' sections)</span>':'')+'</button>'; }).join("")+'</div>';
+  var body=PANES.map(function(p,i){
+    return '<div class="kpane" role="tabpanel" id="kp-'+p[0]+'" data-kpane="'+p[0]+'" aria-labelledby="kt-'+p[0]+'"'+(i?' hidden':'')+'>'+
+      '<h3 class="kpaneh">'+esc(p[1])+'</h3>'+pane(p[2],p[1])+'</div>'; }).join("");
+  return HEAD.join("")+tabs+body+'</div>';
 };
 })();
 
@@ -3202,8 +4017,8 @@ window.buildKundliReport=function(J){
       return Math.round((asUTC-when.getTime())/36000)/100;
     }catch(e){ return null; }
   }
-  function offsetForBirth(tz){
-    var dob=$("k-dob").value, tob=$("k-tob").value||"12:00";
+  function offsetForBirth(tz,dob,tob){
+    dob=dob||$("k-dob").value; tob=tob||$("k-tob").value||"12:00";
     if(!dob||!tz) return null;
     var d=dob.split("-"), t=tob.split(":");
     // approximate the instant as UTC, then refine once with the resulting offset
@@ -3316,6 +4131,7 @@ window.buildKundliReport=function(J){
       })();
     }catch(e){}
     window.__kdata=d;
+    initReport();
     var pb=$("k-print"), db=$("k-dl");
     if(pb) pb.style.display=""; if(db) db.style.display="";
     var r=$("k-result"); if(r&&r.scrollIntoView) r.scrollIntoView({behavior:"smooth",block:"start"});
@@ -3430,6 +4246,136 @@ window.buildKundliReport=function(J){
     if(!done){ try{ var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.top="0"; ta.style.opacity="0"; document.body.appendChild(ta); ta.focus(); ta.select(); done=document.execCommand("copy"); document.body.removeChild(ta); }catch(e2){} }
     if(copyMsg){ copyMsg.textContent = done ? "Copied to clipboard." : "Couldn\u2019t copy \u2014 select the text and press Ctrl/Cmd+C."; setTimeout(function(){ copyMsg.textContent=""; }, 3000); }
   });
+
+  /* ---------- report tabs and interactive panes ---------- */
+  var pendingTab=null;
+  function rep(){ return document.getElementById("kreport"); }
+  function showTab(name,scroll){
+    var r=rep(); if(!r) return;
+    r.querySelectorAll("[data-ktab]").forEach(function(b){ var on=b.getAttribute("data-ktab")===name;
+      b.classList.toggle("on",on); b.setAttribute("aria-selected",on?"true":"false"); b.tabIndex=on?0:-1; });
+    r.querySelectorAll(".kpane").forEach(function(p){ p.hidden=p.getAttribute("data-kpane")!==name; });
+    if(scroll){ var t=r.querySelector(".ktabs"); if(t&&t.scrollIntoView) t.scrollIntoView({behavior:"smooth",block:"start"}); }
+  }
+  function initReport(){
+    evRender();
+    if(pendingTab){ showTab(pendingTab,true); pendingTab=null; }
+  }
+  document.addEventListener("click",function(ev){
+    var t=ev.target; if(!t||!t.closest||!rep()||!rep().contains(t)) return;
+    var b=t.closest("[data-ktab]"); if(b){ showTab(b.getAttribute("data-ktab")); return; }
+    var g=t.closest("[data-ktab-go]"); if(g){ ev.preventDefault(); showTab(g.getAttribute("data-ktab-go"),true); return; }
+    var a=t.closest('a[href^="#ks-"]');
+    if(a){ var el=document.getElementById(a.getAttribute("href").slice(1)); if(el){ ev.preventDefault(); showTab("full");
+      el.scrollIntoView({behavior:"smooth",block:"start"}); } return; }
+    var lf=t.closest("[data-klife]");
+    if(lf){ var w=lf.getAttribute("data-klife");
+      rep().querySelectorAll("[data-klife]").forEach(function(x){ x.classList.toggle("on",x===lf); });
+      rep().querySelectorAll("[data-klifev]").forEach(function(v){ v.hidden=v.getAttribute("data-klifev")!==w; }); return; }
+    var st=t.closest("[data-kstep-go]"); if(st){ stepGo(st.getAttribute("data-kstep-go")); return; }
+    var ip=t.closest("[data-kip]"); if(ip){ pick(ip.getAttribute("data-kip")); return; }
+    var sh=t.closest("[data-kshift]"); if(sh){ shiftTime(+sh.getAttribute("data-kshift")); return; }
+    var geo=t.closest("[data-kday-geo]"); if(geo){ dayHere(); return; }
+    if(t.id==="kev-add"){ evAdd(); return; }
+    var dl=t.closest("[data-kev-del]"); if(dl){ var L=evLoad(); L.splice(+dl.getAttribute("data-kev-del"),1); evSave(L); evRender(); return; }
+    if(t.id==="km-searchbtn"){ kmSearch(); return; }
+    var kr=t.closest("#km-results button"); if(kr){ kmPick(+kr.getAttribute("data-i")); return; }
+    if(t.id==="km-go"){ kmGo(); return; }
+  });
+  document.addEventListener("keydown",function(ev){
+    var t=ev.target; if(!t||!t.closest||!rep()||!rep().contains(t)) return;
+    if(t.matches("[data-ktab]")&&(ev.key==="ArrowRight"||ev.key==="ArrowLeft")){
+      var tabs=[].slice.call(rep().querySelectorAll("[data-ktab]")), i=tabs.indexOf(t);
+      var n=tabs[(i+(ev.key==="ArrowRight"?1:tabs.length-1))%tabs.length]; showTab(n.getAttribute("data-ktab")); n.focus(); ev.preventDefault(); return; }
+    if(t.matches("[data-kip]")&&(ev.key==="Enter"||ev.key===" ")){ ev.preventDefault(); pick(t.getAttribute("data-kip")); return; }
+    if(t.id==="km-search"&&ev.key==="Enter"){ ev.preventDefault(); kmSearch(); return; }
+    if((t.id==="kev-label"||t.id==="kev-date")&&ev.key==="Enter"){ ev.preventDefault(); evAdd(); }
+  });
+  // interactive chart: show the panel and shade the houses it names
+  function pick(key){
+    var r=rep(); if(!r) return;
+    var pn=null; r.querySelectorAll(".kipanel").forEach(function(p){ var on=p.getAttribute("data-panel")===key; p.hidden=!on; if(on) pn=p; });
+    var nums=function(s){ return (s||"").split(",").filter(Boolean).map(Number); };
+    var at=pn?nums(pn.getAttribute("data-at")):[], asp=pn?nums(pn.getAttribute("data-asp")):[], own=pn?nums(pn.getAttribute("data-own")):[];
+    r.querySelectorAll(".kih").forEach(function(h){ var n=+h.getAttribute("data-h");
+      h.classList.toggle("is-at",at.indexOf(n)>=0); h.classList.toggle("is-asp",asp.indexOf(n)>=0&&at.indexOf(n)<0);
+      h.classList.toggle("is-own",own.indexOf(n)>=0&&at.indexOf(n)<0&&asp.indexOf(n)<0); });
+    r.querySelectorAll(".kip").forEach(function(p){ p.classList.toggle("on",p.getAttribute("data-kip")===key); });
+  }
+  // reading path stepper
+  function stepGo(go){
+    var r=rep(); if(!r) return; var steps=r.querySelectorAll(".kstep"), cur=1;
+    steps.forEach(function(s){ if(!s.hidden) cur=+s.getAttribute("data-kstep"); });
+    var n=go==="next"?cur+1:go==="prev"?cur-1:+go; n=Math.max(1,Math.min(steps.length,n));
+    steps.forEach(function(s){ s.hidden=+s.getAttribute("data-kstep")!==n; });
+    r.querySelectorAll(".kpath-nav [data-kstep-go]").forEach(function(b){ b.classList.toggle("on",+b.getAttribute("data-kstep-go")===n); });
+    var nx=r.querySelector('.kpath-foot [data-kstep-go="next"]'); if(nx) nx.disabled=(n===steps.length);
+    var pv=r.querySelector('.kpath-foot [data-kstep-go="prev"]'); if(pv) pv.disabled=(n===1);
+  }
+  // birth-time check: recast at a nearby time
+  function shiftTime(min){
+    var tob=$("k-tob").value, dob=$("k-dob").value; if(!tob||!dob) return;
+    var d=dob.split("-"), t=tob.split(":");
+    var dt=new Date(Date.UTC(+d[0],+d[1]-1,+d[2],+t[0],+t[1])+min*60000);
+    $("k-dob").value=dt.toISOString().slice(0,10); $("k-tob").value=dt.toISOString().slice(11,16);
+    pendingTab="btime"; cast();
+  }
+  // today's tools at the viewer's own location
+  function dayHere(){
+    var msg=$("kday-msg");
+    if(!navigator.geolocation){ if(msg) msg.textContent="Location is not available in this browser."; return; }
+    if(msg) msg.textContent="Asking the browser for your location\u2026";
+    navigator.geolocation.getCurrentPosition(function(p){
+      var tz=-new Date().getTimezoneOffset()/60;
+      $("kday").innerHTML=window.__kApi.dayBlock(p.coords.latitude,p.coords.longitude,tz,"your current location");
+      if(msg) msg.textContent="Using your location \u2014 it stays in this browser.";
+    },function(){ if(msg) msg.textContent="Location was not shared; showing the birth place."; },{timeout:10000,maximumAge:600000});
+  }
+  // life events, kept per chart in this browser
+  var EVMEM={};
+  function evKey(){ var i=window.__kdata&&window.__kdata.input; if(!i) return null;
+    return "kundli_events:"+[i.year,i.month,i.day,i.hour,i.minute,(+i.lat).toFixed(2),(+i.lon).toFixed(2)].join("|"); }
+  function evLoad(){ var k=evKey(); if(!k) return [];
+    try{ var v=localStorage.getItem(k); if(v!=null) return JSON.parse(v)||[]; }catch(e){}
+    return (EVMEM[k]||[]).slice(); }
+  function evSave(L){ var k=evKey(); if(!k) return; EVMEM[k]=L.slice(); try{ localStorage.setItem(k,JSON.stringify(L)); }catch(e){} }
+  function evRender(){ var o=$("kev-out"); if(o&&window.__kApi) o.innerHTML=window.__kApi.events(evLoad()); }
+  function evAdd(){
+    var d=$("kev-date").value, l=($("kev-label").value||"").trim(), k=$("kev-kind").value;
+    if(!d){ $("kev-date").focus(); return; }
+    var L=evLoad(); L.push({d:d,t:l,k:k}); evSave(L);
+    $("kev-label").value=""; evRender();
+  }
+  // compatibility: second person's place and chart
+  var KMHITS=null;
+  async function kmSearch(){
+    var q=($("km-search").value||"").trim(), box=$("km-results");
+    if(q.length<2){ box.innerHTML='<div class="k-rmsg">Type at least two letters.</div>'; return; }
+    box.innerHTML='<div class="k-rmsg">Searching\u2026</div>';
+    try{ var db=await loadCities(), hits=searchCities(db,q,8);
+      if(!hits.length){ box.innerHTML='<div class="k-rmsg">No match. Try another spelling, or enter coordinates below.</div>'; return; }
+      KMHITS=hits.map(function(ix){ var r=db.c[ix]; return {lat:r[1],lon:r[2],tz:db.tz[r[3]],label:cityLabel(db,r)}; });
+      box.innerHTML=KMHITS.map(function(h,i){ return '<button type="button" data-i="'+i+'"><b>'+esc(h.label)+'</b><span>'+h.lat.toFixed(4)+'\u00b0, '+h.lon.toFixed(4)+'\u00b0 \u00b7 '+esc(h.tz)+'</span></button>'; }).join("");
+    }catch(e){ box.innerHTML='<div class="k-rmsg">The city list could not be loaded ('+esc(e.message)+'). Enter coordinates below.</div>'; }
+  }
+  function kmPick(i){
+    var h=KMHITS&&KMHITS[i]; if(!h) return;
+    $("km-lat").value=h.lat.toFixed(6); $("km-lon").value=h.lon.toFixed(6);
+    var off=offsetForBirth(h.tz,$("km-dob").value,$("km-tob").value);
+    if(off!=null) $("km-tz").value=off;
+    $("km-note").textContent=h.label+(off!=null?" \u2014 UTC"+(off>=0?"+":"")+off+" for that date.":" \u2014 enter the date first, or set the UTC offset yourself.");
+    $("km-results").innerHTML="";
+  }
+  function kmGo(){
+    var out=$("km-out"), dob=$("km-dob").value, tob=$("km-tob").value;
+    var lat=parseFloat($("km-lat").value), lon=parseFloat($("km-lon").value), tz=parseFloat($("km-tz").value);
+    if(!dob||!tob||isNaN(lat)||isNaN(lon)||isNaN(tz)){ out.innerHTML='<div class="k-err">Enter the second person\'s date, time and place (or coordinates and UTC offset).</div>'; return; }
+    var d=dob.split("-"), t=tob.split(":");
+    try{
+      var J2=window.buildLocalChart({year:+d[0],month:+d[1],day:+d[2],hour:+t[0],minute:+t[1],lat:lat,lon:lon,tzHours:tz});
+      out.innerHTML=window.__kApi.match(J2,{aIsBoy:$("km-role").value==="boy",nameA:window.__kname||"This chart",nameB:($("km-name").value||"").trim()||"Second person"});
+    }catch(e){ out.innerHTML='<div class="k-err">Could not compute the second chart: '+esc(e.message)+'</div>'; }
+  }
 })();
 </script>
 <h2 id="read">How to read what comes back</h2><ul><li><b>Lagna</b> &rarr; its sign and lord set the whole chart &mdash; take it to <a href="lagna.html">Lagna</a>.</li><li><b>Each graha&rsquo;s dignity</b> (exalted / own / friend / neutral / enemy / debilitated) &rarr; <a href="dignity.html">Dignity</a>.</li><li><b>Each graha&rsquo;s nakshatra &middot; pada</b> &rarr; click it to open the <a href="108-nakshatra-padas.html">108 Padas</a> tool at that pada.</li><li><b>Running period</b> &rarr; the Vimshottari maha/antar in force &mdash; <a href="dashas.html">Dashas</a>.</li><li><b>Vargas, ashtakavarga, yogas, arudhas, karakas, avasthas, ṣaḍbala</b> &rarr; each has its own section in the report, and a matching reference page on this site.</li></ul><div class="mine"><b>Study note.</b> Treat the computed chart as the <i>structure</i> to reason about, and let this site&rsquo;s pages carry the <i>interpretation</i>. That keeps the three-layer discipline intact: the engine gives positions, BPHS gives the method, and any synthesis is labelled as such.</div><h2 id="limits">Accuracy, attribution &amp; limits</h2><p>Positions come from <a href="https://github.com/cosinekitty/astronomy" target="_blank" rel="noopener">astronomy-engine</a> (MIT licence), with the Lahiri ayanāṃśa fitted to Swiss Ephemeris — it reproduces Swiss Ephemeris ayanāṃśa to a hundredth of an arcsecond and planetary longitudes to well under an arcminute, which is far finer than a nakshatra pāda (3°20&prime;) or a D60 amsa (30&prime;). The lagna is computed from sidereal time and lands within about a quarter of an arcminute. Ashtakavarga, the yoga catalogue, ārūḍhas, kārakas, avasthās, Bhayāta/Bhabhoga, ṣaḍbala and the daśā tree are all derived here from those positions using the classical rules this site documents.</p><p>One place is deliberately simplified and labelled where it appears: Nathonnatha is measured from clock noon rather than local apparent noon. Sunrise/sunset uses the Jyotiṣa convention (the Sun&rsquo;s disc centre at the geometric horizon, unrefracted), which reproduces classical pañcāṅga timings and is what Iṣṭakāla, the upagrahas and the special lagnas are measured from. Ārūḍha exception cases follow the rule given on the <a href="special-points.html">Special Points</a> page. The optional cross-check fetches a second opinion from <a href="https://bharatephemeris.com" target="_blank" rel="noopener">bharatephemeris.com</a>, an independent third-party service whose uptime and terms are outside this site&rsquo;s control.</p><div class="caution"><b>Handle with care.</b> Astrological output is a reflective framework, not a determinant of events. Nothing here predicts health, death, wealth, marriage or misfortune; for any real-life decision, consult a qualified professional in the relevant field.</div></main></div><footer><div class="wrap"><p><b>Three layers, kept distinct.</b> <b>BPHS text</b> = what the translated verses state · <b>translator/commentary</b> = notes in the Santhanam edition · <b>study notes</b> = plain-language synthesis or later analytical practice added here. Chapter citations refer to the uploaded Santhanam edition; verse numbers are OCR-affected, so confirm exact numbers in the PDF.</p><p>Educational reference on traditional doctrine only — not a scientific, medical, legal, financial or predictive claim about any person. For health, legal, financial, relationship or safety matters, consult a qualified professional.</p></div></footer></body></html>
